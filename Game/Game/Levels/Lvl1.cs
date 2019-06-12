@@ -43,6 +43,8 @@ namespace Game.Levels
         //Thread for opening new win form
         private Thread th;
 
+        
+
         protected override CreateParams CreateParams // this activates DB and removes flickering and tearing!
         {
             get
@@ -63,6 +65,7 @@ namespace Game.Levels
             backgroundSound.Play();
             score.Text = "Score : " + points;
             this.DoubleBuffered = true;
+
         }
 
        
@@ -102,6 +105,7 @@ namespace Game.Levels
                 if (points < 12) { platformSpeed2++; }
                 isWin = false;
                 backgroundSound.Play();
+
             }
 
 

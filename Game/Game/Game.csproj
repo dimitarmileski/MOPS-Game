@@ -62,6 +62,7 @@
     <Compile Include="LevelsForm.Designer.cs">
       <DependentUpon>LevelsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LevelsState.cs" />
     <Compile Include="Levels\Lvl1.cs">
       <SubType>Form</SubType>
     </Compile>
