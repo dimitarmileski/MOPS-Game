@@ -267,6 +267,24 @@
   <ItemGroup>
     <None Include="Resources\background.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Forms\" />
+    <Folder Include="Resources\Lvl10\" />
+    <Folder Include="Resources\Lvl11\" />
+    <Folder Include="Resources\Lvl12\" />
+    <Folder Include="Resources\Lvl13\" />
+    <Folder Include="Resources\Lvl14\" />
+    <Folder Include="Resources\Lvl15\" />
+    <Folder Include="Resources\Lvl1\" />
+    <Folder Include="Resources\Lvl2\" />
+    <Folder Include="Resources\Lvl3\" />
+    <Folder Include="Resources\Lvl4\" />
+    <Folder Include="Resources\Lvl5\" />
+    <Folder Include="Resources\Lvl6\" />
+    <Folder Include="Resources\Lvl7\" />
+    <Folder Include="Resources\Lvl8\" />
+    <Folder Include="Resources\Lvl9\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

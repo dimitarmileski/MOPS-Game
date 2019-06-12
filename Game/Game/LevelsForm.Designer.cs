@@ -73,7 +73,7 @@
             // 
             // picBoxLvl1
             // 
-            this.picBoxLvl1.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl1.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl1.Location = new System.Drawing.Point(46, 71);
             this.picBoxLvl1.Name = "picBoxLvl1";
             this.picBoxLvl1.Size = new System.Drawing.Size(110, 70);
@@ -83,7 +83,7 @@
             // 
             // picBoxLvl2
             // 
-            this.picBoxLvl2.BackColor = System.Drawing.Color.Lime;
+            this.picBoxLvl2.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl2.Location = new System.Drawing.Point(209, 71);
             this.picBoxLvl2.Name = "picBoxLvl2";
             this.picBoxLvl2.Size = new System.Drawing.Size(110, 70);
@@ -93,7 +93,7 @@
             // 
             // picBoxLvl3
             // 
-            this.picBoxLvl3.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl3.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl3.Location = new System.Drawing.Point(357, 71);
             this.picBoxLvl3.Name = "picBoxLvl3";
             this.picBoxLvl3.Size = new System.Drawing.Size(110, 70);
@@ -103,7 +103,7 @@
             // 
             // picBoxLvl4
             // 
-            this.picBoxLvl4.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl4.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl4.Location = new System.Drawing.Point(509, 71);
             this.picBoxLvl4.Name = "picBoxLvl4";
             this.picBoxLvl4.Size = new System.Drawing.Size(110, 70);
@@ -113,7 +113,7 @@
             // 
             // picBoxLvl5
             // 
-            this.picBoxLvl5.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl5.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl5.Location = new System.Drawing.Point(669, 71);
             this.picBoxLvl5.Name = "picBoxLvl5";
             this.picBoxLvl5.Size = new System.Drawing.Size(110, 70);
@@ -123,7 +123,7 @@
             // 
             // picBoxLvl6
             // 
-            this.picBoxLvl6.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl6.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl6.Location = new System.Drawing.Point(46, 199);
             this.picBoxLvl6.Name = "picBoxLvl6";
             this.picBoxLvl6.Size = new System.Drawing.Size(110, 70);
@@ -133,7 +133,7 @@
             // 
             // picBoxLvl7
             // 
-            this.picBoxLvl7.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl7.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl7.Location = new System.Drawing.Point(209, 199);
             this.picBoxLvl7.Name = "picBoxLvl7";
             this.picBoxLvl7.Size = new System.Drawing.Size(110, 70);
@@ -143,7 +143,7 @@
             // 
             // picBoxLvl8
             // 
-            this.picBoxLvl8.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl8.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl8.Location = new System.Drawing.Point(357, 199);
             this.picBoxLvl8.Name = "picBoxLvl8";
             this.picBoxLvl8.Size = new System.Drawing.Size(110, 70);
@@ -153,7 +153,7 @@
             // 
             // picBoxLvl9
             // 
-            this.picBoxLvl9.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl9.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl9.Location = new System.Drawing.Point(509, 199);
             this.picBoxLvl9.Name = "picBoxLvl9";
             this.picBoxLvl9.Size = new System.Drawing.Size(110, 70);
@@ -163,7 +163,7 @@
             // 
             // picBoxLvl10
             // 
-            this.picBoxLvl10.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl10.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl10.Location = new System.Drawing.Point(669, 199);
             this.picBoxLvl10.Name = "picBoxLvl10";
             this.picBoxLvl10.Size = new System.Drawing.Size(110, 70);
@@ -173,7 +173,7 @@
             // 
             // picBoxLvl11
             // 
-            this.picBoxLvl11.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl11.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl11.Location = new System.Drawing.Point(46, 328);
             this.picBoxLvl11.Name = "picBoxLvl11";
             this.picBoxLvl11.Size = new System.Drawing.Size(110, 70);
@@ -183,7 +183,7 @@
             // 
             // picBoxLvl12
             // 
-            this.picBoxLvl12.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl12.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl12.Location = new System.Drawing.Point(209, 328);
             this.picBoxLvl12.Name = "picBoxLvl12";
             this.picBoxLvl12.Size = new System.Drawing.Size(110, 70);
@@ -193,7 +193,7 @@
             // 
             // picBoxLvl13
             // 
-            this.picBoxLvl13.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl13.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl13.Location = new System.Drawing.Point(357, 328);
             this.picBoxLvl13.Name = "picBoxLvl13";
             this.picBoxLvl13.Size = new System.Drawing.Size(110, 70);
@@ -203,7 +203,7 @@
             // 
             // picBoxLvl14
             // 
-            this.picBoxLvl14.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl14.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl14.Location = new System.Drawing.Point(509, 328);
             this.picBoxLvl14.Name = "picBoxLvl14";
             this.picBoxLvl14.Size = new System.Drawing.Size(110, 70);
@@ -213,7 +213,7 @@
             // 
             // picBoxLvl15
             // 
-            this.picBoxLvl15.BackColor = System.Drawing.Color.Blue;
+            this.picBoxLvl15.BackColor = System.Drawing.Color.Crimson;
             this.picBoxLvl15.Location = new System.Drawing.Point(669, 328);
             this.picBoxLvl15.Name = "picBoxLvl15";
             this.picBoxLvl15.Size = new System.Drawing.Size(110, 70);
