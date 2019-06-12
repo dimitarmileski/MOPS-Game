@@ -62,6 +62,96 @@
     <Compile Include="LevelsForm.Designer.cs">
       <DependentUpon>LevelsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Levels\Lvl1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl1.Designer.cs">
+      <DependentUpon>Lvl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl10.Designer.cs">
+      <DependentUpon>Lvl10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl11.Designer.cs">
+      <DependentUpon>Lvl11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl12.Designer.cs">
+      <DependentUpon>Lvl12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl13.Designer.cs">
+      <DependentUpon>Lvl13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl14.Designer.cs">
+      <DependentUpon>Lvl14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl15.Designer.cs">
+      <DependentUpon>Lvl15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl2.Designer.cs">
+      <DependentUpon>Lvl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl3.Designer.cs">
+      <DependentUpon>Lvl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl4.Designer.cs">
+      <DependentUpon>Lvl4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl5.Designer.cs">
+      <DependentUpon>Lvl5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl6.Designer.cs">
+      <DependentUpon>Lvl6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl7.Designer.cs">
+      <DependentUpon>Lvl7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl8.Designer.cs">
+      <DependentUpon>Lvl8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels\Lvl9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Levels\Lvl9.Designer.cs">
+      <DependentUpon>Lvl9.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +174,51 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LevelsForm.resx">
       <DependentUpon>LevelsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl1.resx">
+      <DependentUpon>Lvl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl10.resx">
+      <DependentUpon>Lvl10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl11.resx">
+      <DependentUpon>Lvl11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl12.resx">
+      <DependentUpon>Lvl12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl13.resx">
+      <DependentUpon>Lvl13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl14.resx">
+      <DependentUpon>Lvl14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl15.resx">
+      <DependentUpon>Lvl15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl2.resx">
+      <DependentUpon>Lvl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl3.resx">
+      <DependentUpon>Lvl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl4.resx">
+      <DependentUpon>Lvl4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl5.resx">
+      <DependentUpon>Lvl5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl6.resx">
+      <DependentUpon>Lvl6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl7.resx">
+      <DependentUpon>Lvl7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl8.resx">
+      <DependentUpon>Lvl8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels\Lvl9.resx">
+      <DependentUpon>Lvl9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
