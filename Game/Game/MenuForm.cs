@@ -54,7 +54,13 @@ namespace Game
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Do you want to exit ?", "Menu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+          
         }
 
 
