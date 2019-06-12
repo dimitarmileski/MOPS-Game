@@ -62,3 +62,17 @@ C:\Users\User\Desktop\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
 C:\Users\User\Desktop\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\Game\Game\obj\Debug\Game.exe
 C:\Users\User\Desktop\Game\Game\obj\Debug\Game.pdb
+C:\Users\User\Documents\GitHub\Game\Game\Game\bin\Debug\Game.exe.config
+C:\Users\User\Documents\GitHub\Game\Game\Game\bin\Debug\Game.exe
+C:\Users\User\Documents\GitHub\Game\Game\Game\bin\Debug\Game.pdb
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.AboutForm.resources
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.Game.resources
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.LevelsForm.resources
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.MenuForm.resources
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.OptionsForm.resources
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.exe
+C:\Users\User\Documents\GitHub\Game\Game\Game\obj\Debug\Game.pdb

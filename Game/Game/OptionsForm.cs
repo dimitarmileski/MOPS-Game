@@ -35,5 +35,12 @@ namespace Game
             Application.Run(new MenuForm());
         }
 
+        private void chkSound_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkSound.Checked)
+            {
+               //Code for checked
+            }
+        }
     }
 }
