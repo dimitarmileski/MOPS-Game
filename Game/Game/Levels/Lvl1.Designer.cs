@@ -125,9 +125,9 @@
             this.controls.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.controls.BackColor = System.Drawing.SystemColors.Info;
             this.controls.Enabled = false;
-            this.controls.Location = new System.Drawing.Point(897, 0);
+            this.controls.Location = new System.Drawing.Point(762, 3);
             this.controls.Name = "controls";
-            this.controls.Size = new System.Drawing.Size(287, 22);
+            this.controls.Size = new System.Drawing.Size(384, 22);
             this.controls.TabIndex = 10;
             this.controls.Text = "Move = left/right  Jump = space  Restart = enter  Exit = esc";
             // 
@@ -138,7 +138,7 @@
             this.score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.score.Location = new System.Drawing.Point(0, 0);
             this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(133, 37);
+            this.score.Size = new System.Drawing.Size(143, 37);
             this.score.TabIndex = 6;
             // 
             // block4
