@@ -19,12 +19,46 @@ namespace Game
 
         private string levelSelected;
 
- 
+
+        //Levels Picture Box
+        private List<PictureBox> levelsBoxes;
 
         public LevelsForm()
         {
             InitializeComponent();
             levelSelected = "";
+            
+            initLevelsBoxes();
+            
+        }
+
+        private void initLevelsBoxes()
+        {
+            levelsBoxes = new List<PictureBox>();
+
+            levelsBoxes.Add(picBoxLvl1);
+            levelsBoxes.Add(picBoxLvl2);
+            levelsBoxes.Add(picBoxLvl3);
+            levelsBoxes.Add(picBoxLvl4);
+            levelsBoxes.Add(picBoxLvl5);
+            levelsBoxes.Add(picBoxLvl6);
+            levelsBoxes.Add(picBoxLvl7);
+            levelsBoxes.Add(picBoxLvl8);
+            levelsBoxes.Add(picBoxLvl9);
+            levelsBoxes.Add(picBoxLvl10);
+            levelsBoxes.Add(picBoxLvl11);
+            levelsBoxes.Add(picBoxLvl12);
+            levelsBoxes.Add(picBoxLvl13);
+            levelsBoxes.Add(picBoxLvl14);
+            levelsBoxes.Add(picBoxLvl15);
+
+            for (int i = 0; i < levelsBoxes.Count(); i++)
+            {
+                if (LevelsState.levelPassed[i]) 
+                    levelsBoxes[i].BackColor = Color.YellowGreen;
+                else
+                    levelsBoxes[i].BackColor = Color.Crimson;
+            }
 
         }
 

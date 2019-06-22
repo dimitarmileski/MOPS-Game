@@ -106,6 +106,8 @@ namespace Game.Levels
                 isWin = false;
                 backgroundSound.Play();
 
+                LevelsState.levelPassed[0] = true;
+
             }
 
 

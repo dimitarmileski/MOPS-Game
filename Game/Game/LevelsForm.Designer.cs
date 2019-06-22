@@ -88,7 +88,7 @@
             // 
             // picBoxLvl1
             // 
-            this.picBoxLvl1.BackColor = System.Drawing.Color.Crimson;
+            this.picBoxLvl1.BackColor = System.Drawing.Color.YellowGreen;
             this.picBoxLvl1.Location = new System.Drawing.Point(46, 71);
             this.picBoxLvl1.Name = "picBoxLvl1";
             this.picBoxLvl1.Size = new System.Drawing.Size(110, 70);

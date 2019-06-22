@@ -6,27 +6,15 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public class LevelsState
+    [Serializable]
+    public static class LevelsState
     {
-        private bool [] levelPassed;
+        public static bool [] levelPassed  = new bool[15];
 
-        public LevelsState()
+        public static bool isLevelPassed(int i)
         {
-            levelPassed = new bool[15];
-        }
-
-        public void passLevel(int i) {
-            levelPassed[i] = true;
-        }
-
-        public bool isLevelPassed(int i) {
             return levelPassed[i];
         }
-
-        public bool [] getLevelPassed() {
-            return levelPassed;
-        }
-
 
     }
 }

@@ -103,6 +103,7 @@
             this.Star.Location = new System.Drawing.Point(584, 10);
             this.Star.Name = "Star";
             this.Star.Size = new System.Drawing.Size(32, 54);
+            this.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Star.TabIndex = 8;
             this.Star.TabStop = false;
             // 
@@ -115,6 +116,7 @@
             this.player.Location = new System.Drawing.Point(262, 627);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(16, 32);
+            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.player.TabIndex = 0;
             this.player.TabStop = false;
             // 
@@ -148,6 +150,7 @@
             this.block4.Location = new System.Drawing.Point(588, 150);
             this.block4.Name = "block4";
             this.block4.Size = new System.Drawing.Size(75, 15);
+            this.block4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block4.TabIndex = 5;
             this.block4.TabStop = false;
             // 
@@ -160,6 +163,7 @@
             this.block3.Location = new System.Drawing.Point(838, 250);
             this.block3.Name = "block3";
             this.block3.Size = new System.Drawing.Size(100, 15);
+            this.block3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block3.TabIndex = 4;
             this.block3.TabStop = false;
             // 
@@ -172,6 +176,7 @@
             this.block2.Location = new System.Drawing.Point(238, 350);
             this.block2.Name = "block2";
             this.block2.Size = new System.Drawing.Size(125, 15);
+            this.block2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block2.TabIndex = 3;
             this.block2.TabStop = false;
             // 
@@ -184,6 +189,7 @@
             this.block1.Location = new System.Drawing.Point(688, 450);
             this.block1.Name = "block1";
             this.block1.Size = new System.Drawing.Size(150, 15);
+            this.block1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block1.TabIndex = 2;
             this.block1.TabStop = false;
             // 
@@ -196,6 +202,7 @@
             this.block0.Location = new System.Drawing.Point(338, 560);
             this.block0.Name = "block0";
             this.block0.Size = new System.Drawing.Size(500, 15);
+            this.block0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block0.TabIndex = 1;
             this.block0.TabStop = false;
             // 
@@ -208,6 +215,7 @@
             this.bad_guy.Location = new System.Drawing.Point(490, 482);
             this.bad_guy.Name = "bad_guy";
             this.bad_guy.Size = new System.Drawing.Size(81, 79);
+            this.bad_guy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bad_guy.TabIndex = 0;
             this.bad_guy.TabStop = false;
             // 
@@ -216,7 +224,8 @@
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
             this.GameOver.Location = new System.Drawing.Point(0, 0);
             this.GameOver.Name = "GameOver";
-            this.GameOver.Size = new System.Drawing.Size(1184, 662);
+            this.GameOver.Size = new System.Drawing.Size(1200, 700);
+            this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.GameOver.TabIndex = 9;
             this.GameOver.TabStop = false;
             this.GameOver.Visible = false;

@@ -26,12 +26,19 @@ namespace Game
         public MenuItemSelected menuItemSelected;
 
 
+
         public MenuForm()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+
+            for (int i = 0; i < LevelsState.levelPassed.Count(); i++)
+            {
+                LevelsState.levelPassed[i] = false;
+            }
+
         }
 
         private void btnStart_Click(object sender, EventArgs e) {
