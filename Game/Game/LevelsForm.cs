@@ -32,6 +32,13 @@ namespace Game
             
         }
 
+        private void LevelsForm_Load(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+        }
+
         private void initLevelsBoxes()
         {
             levelsBoxes = new List<PictureBox>();
@@ -227,6 +234,7 @@ namespace Game
             levelSelected = "15";
             openLevelForm();
         }
-        
+
+      
     }
 }

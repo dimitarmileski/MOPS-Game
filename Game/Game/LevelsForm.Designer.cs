@@ -409,6 +409,7 @@
             this.Controls.Add(this.btnMenu);
             this.Name = "LevelsForm";
             this.Text = "LevelsForm";
+            this.Load += new System.EventHandler(this.LevelsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl3)).EndInit();

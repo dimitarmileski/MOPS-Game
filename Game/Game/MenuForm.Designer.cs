@@ -86,7 +86,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-           
             // 
             // MenuForm
             // 
@@ -100,6 +99,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "MenuForm";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.MenuForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

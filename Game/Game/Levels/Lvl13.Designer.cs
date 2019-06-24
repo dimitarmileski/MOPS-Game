@@ -49,6 +49,7 @@
             this.Controls.Add(this.btnLevels);
             this.Name = "Lvl13";
             this.Text = "Lvl13";
+            this.Load += new System.EventHandler(this.Lvl13_Load);
             this.ResumeLayout(false);
 
         }

@@ -66,10 +66,35 @@ namespace Game.Levels
             score.Text = "Score : " + points;
             this.DoubleBuffered = true;
 
+            initPositions();
+
         }
 
-       
+        private void initPositions()
+        {
+            Star.Location = new Point(this.Width-(this.Width/6), Star.Height/2);
 
+            Random rnd = new Random();
+
+            block0.Location = new Point(rnd.Next(100, this.Width - 100), 420);
+            bad_guy.Location = new Point(block0.Location.X /2, block0.Location.Y - bad_guy.Height);
+
+            block1.Location = new Point(rnd.Next(100, this.Width-100), 320);
+            block2.Location = new Point(rnd.Next(100, this.Width - 100), 220);
+            block3.Location = new Point(rnd.Next(100, this.Width - 100), 120);
+            block4.Location = new Point(rnd.Next(100, this.Width - 100), 20);
+
+
+          
+            player.Location = new Point(rnd.Next(100, this.Width - 100), this.Height - player.Height);
+        }
+
+        private void Lvl1_Load(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+        }
 
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -428,6 +453,7 @@ namespace Game.Levels
             Application.Run(new LevelsForm());
         }
 
+       
     }
 }
 

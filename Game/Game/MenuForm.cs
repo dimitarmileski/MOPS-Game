@@ -41,6 +41,13 @@ namespace Game
 
         }
 
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+        }
+
         private void btnStart_Click(object sender, EventArgs e) {
 
             menuItemSelected = MenuItemSelected.Levels;
@@ -96,6 +103,6 @@ namespace Game
 
         }
 
-
+       
     }
 }

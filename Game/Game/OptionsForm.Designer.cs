@@ -73,6 +73,7 @@
             this.Controls.Add(this.btnMenu);
             this.Name = "OptionsForm";
             this.Text = "Options";
+            this.Load += new System.EventHandler(this.OptionsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

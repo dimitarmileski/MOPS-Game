@@ -73,6 +73,7 @@
             this.Controls.Add(this.btnMenu);
             this.Name = "AboutForm";
             this.Text = "AboutForm";
+            this.Load += new System.EventHandler(this.AboutForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

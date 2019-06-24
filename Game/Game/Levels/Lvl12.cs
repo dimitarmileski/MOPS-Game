@@ -21,6 +21,12 @@ namespace Game.Levels
             InitializeComponent();
         }
 
+        private void Lvl12_Load(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+        }
         private void btnLevels_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to quit this level?", "Menu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -38,5 +44,7 @@ namespace Game.Levels
         {
             Application.Run(new LevelsForm());
         }
+
+        
     }
 }
