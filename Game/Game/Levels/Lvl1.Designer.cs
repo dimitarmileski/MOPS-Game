@@ -40,21 +40,27 @@
             this.block4 = new System.Windows.Forms.PictureBox();
             this.block3 = new System.Windows.Forms.PictureBox();
             this.block2 = new System.Windows.Forms.PictureBox();
+            this.block1 = new System.Windows.Forms.PictureBox();
             this.block0 = new System.Windows.Forms.PictureBox();
             this.bad_guy = new System.Windows.Forms.PictureBox();
             this.GameOver = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.block1 = new System.Windows.Forms.PictureBox();
+            this.block5 = new System.Windows.Forms.PictureBox();
+            this.block6 = new System.Windows.Forms.PictureBox();
+            this.block7 = new System.Windows.Forms.PictureBox();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Star)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bad_guy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -67,6 +73,9 @@
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
             this.screen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.screen.Controls.Add(this.block7);
+            this.screen.Controls.Add(this.block6);
+            this.screen.Controls.Add(this.block5);
             this.screen.Controls.Add(this.btnLevels);
             this.screen.Controls.Add(this.Star);
             this.screen.Controls.Add(this.player);
@@ -82,7 +91,7 @@
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.Location = new System.Drawing.Point(0, 0);
             this.screen.Name = "screen";
-            this.screen.Size = new System.Drawing.Size(1184, 819);
+            this.screen.Size = new System.Drawing.Size(1184, 851);
             this.screen.TabIndex = 1;
             // 
             // btnLevels
@@ -113,7 +122,7 @@
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.player.Image = ((System.Drawing.Image)(resources.GetObject("player.Image")));
-            this.player.Location = new System.Drawing.Point(262, 675);
+            this.player.Location = new System.Drawing.Point(262, 691);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(16, 32);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -147,7 +156,7 @@
             this.block4.BackColor = System.Drawing.Color.Transparent;
             this.block4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block4.Image = global::Game.Properties.Resources._4;
-            this.block4.Location = new System.Drawing.Point(588, 198);
+            this.block4.Location = new System.Drawing.Point(588, 214);
             this.block4.Name = "block4";
             this.block4.Size = new System.Drawing.Size(75, 15);
             this.block4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +169,7 @@
             this.block3.BackColor = System.Drawing.Color.Transparent;
             this.block3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block3.Image = global::Game.Properties.Resources._3;
-            this.block3.Location = new System.Drawing.Point(838, 298);
+            this.block3.Location = new System.Drawing.Point(838, 314);
             this.block3.Name = "block3";
             this.block3.Size = new System.Drawing.Size(100, 15);
             this.block3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,12 +182,25 @@
             this.block2.BackColor = System.Drawing.Color.Transparent;
             this.block2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block2.Image = global::Game.Properties.Resources._2;
-            this.block2.Location = new System.Drawing.Point(238, 398);
+            this.block2.Location = new System.Drawing.Point(238, 414);
             this.block2.Name = "block2";
             this.block2.Size = new System.Drawing.Size(125, 15);
             this.block2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block2.TabIndex = 3;
             this.block2.TabStop = false;
+            // 
+            // block1
+            // 
+            this.block1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.block1.BackColor = System.Drawing.Color.Transparent;
+            this.block1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.block1.Image = global::Game.Properties.Resources._1;
+            this.block1.Location = new System.Drawing.Point(688, 514);
+            this.block1.Name = "block1";
+            this.block1.Size = new System.Drawing.Size(150, 15);
+            this.block1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.block1.TabIndex = 2;
+            this.block1.TabStop = false;
             // 
             // block0
             // 
@@ -186,7 +208,7 @@
             this.block0.BackColor = System.Drawing.Color.Transparent;
             this.block0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block0.Image = global::Game.Properties.Resources._0;
-            this.block0.Location = new System.Drawing.Point(338, 608);
+            this.block0.Location = new System.Drawing.Point(338, 624);
             this.block0.Name = "block0";
             this.block0.Size = new System.Drawing.Size(500, 15);
             this.block0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -199,7 +221,7 @@
             this.bad_guy.BackColor = System.Drawing.Color.Transparent;
             this.bad_guy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bad_guy.Image = ((System.Drawing.Image)(resources.GetObject("bad_guy.Image")));
-            this.bad_guy.Location = new System.Drawing.Point(490, 530);
+            this.bad_guy.Location = new System.Drawing.Point(490, 546);
             this.bad_guy.Name = "bad_guy";
             this.bad_guy.Size = new System.Drawing.Size(81, 79);
             this.bad_guy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,24 +244,50 @@
             this.timer2.Enabled = true;
             this.timer2.Interval = 1;
             // 
-            // block1
+            // block5
             // 
-            this.block1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.block1.BackColor = System.Drawing.Color.Transparent;
-            this.block1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block1.Image = global::Game.Properties.Resources._1;
-            this.block1.Location = new System.Drawing.Point(688, 498);
-            this.block1.Name = "block1";
-            this.block1.Size = new System.Drawing.Size(150, 15);
-            this.block1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.block1.TabIndex = 2;
-            this.block1.TabStop = false;
+            this.block5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.block5.BackColor = System.Drawing.Color.Transparent;
+            this.block5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.block5.Image = global::Game.Properties.Resources._0;
+            this.block5.Location = new System.Drawing.Point(338, 701);
+            this.block5.Name = "block5";
+            this.block5.Size = new System.Drawing.Size(500, 15);
+            this.block5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.block5.TabIndex = 12;
+            this.block5.TabStop = false;
+            // 
+            // block6
+            // 
+            this.block6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.block6.BackColor = System.Drawing.Color.Transparent;
+            this.block6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.block6.Image = global::Game.Properties.Resources._0;
+            this.block6.Location = new System.Drawing.Point(338, 784);
+            this.block6.Name = "block6";
+            this.block6.Size = new System.Drawing.Size(500, 15);
+            this.block6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.block6.TabIndex = 13;
+            this.block6.TabStop = false;
+            // 
+            // block7
+            // 
+            this.block7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.block7.BackColor = System.Drawing.Color.Transparent;
+            this.block7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.block7.Image = global::Game.Properties.Resources._0;
+            this.block7.Location = new System.Drawing.Point(338, 824);
+            this.block7.Name = "block7";
+            this.block7.Size = new System.Drawing.Size(500, 15);
+            this.block7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.block7.TabIndex = 14;
+            this.block7.TabStop = false;
             // 
             // Lvl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 819);
+            this.ClientSize = new System.Drawing.Size(1184, 851);
             this.Controls.Add(this.screen);
             this.Name = "Lvl1";
             this.Text = "Lvl1";
@@ -253,10 +301,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.block4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bad_guy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,5 +328,8 @@
         private System.Windows.Forms.PictureBox GameOver;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox block1;
+        private System.Windows.Forms.PictureBox block5;
+        private System.Windows.Forms.PictureBox block6;
+        private System.Windows.Forms.PictureBox block7;
     }
 }

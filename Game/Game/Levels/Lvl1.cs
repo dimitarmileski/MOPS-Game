@@ -35,6 +35,9 @@ namespace Game.Levels
         bool check2 = true;
         bool check3 = false;
         bool check4 = true;
+        bool check5 = true;
+        bool check6 = false;
+        bool check7 = true;
         bool check_guy1 = false;
         bool isCatched = false;
         bool isWin = false;
@@ -83,9 +86,12 @@ namespace Game.Levels
             block2.Location = new Point(rnd.Next(100, this.Width - 100), 220);
             block3.Location = new Point(rnd.Next(100, this.Width - 100), 120);
             block4.Location = new Point(rnd.Next(100, this.Width - 100), 20);
+            block5.Location = new Point(rnd.Next(100, this.Width - 100), 520);
+            block6.Location = new Point(rnd.Next(100, this.Width - 100), 620);
+            block7.Location = new Point(rnd.Next(100, this.Width - 100), 720);
 
 
-          
+
             player.Location = new Point(rnd.Next(100, this.Width - 100), this.Height - player.Height);
         }
 
@@ -183,6 +189,9 @@ namespace Game.Levels
             physics(block2);
             physics(block3);
             physics(block4);
+            physics(block5);
+            physics(block6);
+            physics(block7);
 
             //block0 movement and wall collision
             if (block0.Right > screen.Right)
@@ -335,6 +344,101 @@ namespace Game.Levels
                 if (player.Bottom == block4.Top)
                 {
                     player.Left -= (5 + platformSpeed2);
+                }
+            }
+
+
+            //block5 movement and wall collision
+            if (block5.Right > screen.Right)
+            {
+                block5.Left = screen.Width - block5.Width;
+                check5 = false;
+            }
+
+            if (block5.Left < screen.Left)
+            {
+                block5.Left = screen.Left;
+                check5 = true;
+            }
+
+            if (check5 == true)
+            {
+                block5.Left += (5 + platformSpeed2);
+                if (player.Bottom == block5.Top)
+                {
+                    player.Left += (5 + platformSpeed2);
+                }
+            }
+
+            else
+            {
+                block5.Left -= (5 + platformSpeed2);
+                if (player.Bottom == block5.Top)
+                {
+                    player.Left -= (5 + platformSpeed2);
+                }
+            }
+
+
+            //block6 movement and wall collision
+            if (block6.Right > screen.Right)
+            {
+                block6.Left = screen.Width - block6.Width;
+                check6 = false;
+            }
+
+            if (block6.Left < screen.Left)
+            {
+                block6.Left = screen.Left;
+                check6 = true;
+            }
+
+            if (check6 == true)
+            {
+                block6.Left += (2 + platformSpeed1);
+                if (player.Bottom == block6.Top)
+                {
+                    player.Left += (2 + platformSpeed1);
+                }
+            }
+
+            else
+            {
+                block6.Left -= (2 + platformSpeed1);
+                if (player.Bottom == block6.Top)
+                {
+                    player.Left -= (2 + platformSpeed1);
+                }
+            }
+
+
+            //block7 movement and wall collision
+            if (block7.Right > screen.Right)
+            {
+                block7.Left = screen.Width - block7.Width;
+                check7 = false;
+            }
+            if (block7.Left < screen.Left)
+            {
+                block7.Left = screen.Left;
+                check7 = true;
+            }
+            if (check7 == true)
+            {
+                block7.Left += 2;
+                if (player.Bottom == block7.Top)
+                {
+                    player.Left += 2;
+                    bad_guy.Left += 2;
+                }
+            }
+            else
+            {
+                block7.Left -= 2;
+                if (player.Bottom == block7.Top)
+                {
+                    player.Left -= 2;
+                    bad_guy.Left -= 2;
                 }
             }
 
