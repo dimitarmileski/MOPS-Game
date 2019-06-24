@@ -71,6 +71,7 @@ namespace Game.Levels
 
             initPositions();
 
+
         }
 
         private void initPositions()
@@ -100,6 +101,9 @@ namespace Game.Levels
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+
+            GameOver.ImageLocation = "http://i.imgur.com/0hUyqsP.jpg"; //path to image
+            GameOver.Visible = true;
         }
 
 
