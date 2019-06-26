@@ -33,13 +33,17 @@
             // 
             // btnLevels
             // 
-            this.btnLevels.Location = new System.Drawing.Point(12, 12);
+            this.btnLevels.BackColor = System.Drawing.Color.DarkGray;
+            this.btnLevels.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLevels.ForeColor = System.Drawing.Color.White;
+            this.btnLevels.Location = new System.Drawing.Point(-3, -3);
             this.btnLevels.Name = "btnLevels";
-            this.btnLevels.Size = new System.Drawing.Size(75, 23);
-            this.btnLevels.TabIndex = 0;
-            this.btnLevels.Text = "Levels";
-            this.btnLevels.UseVisualStyleBackColor = true;
-            this.btnLevels.Click += new System.EventHandler(this.btnLevels_Click);
+            this.btnLevels.Size = new System.Drawing.Size(208, 64);
+            this.btnLevels.TabIndex = 30;
+            this.btnLevels.TabStop = false;
+            this.btnLevels.Text = "< Levels";
+            this.btnLevels.UseVisualStyleBackColor = false;
+            this.btnLevels.Click += new System.EventHandler(this.BtnLevels_Click_1);
             // 
             // Lvl15
             // 

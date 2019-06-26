@@ -27,7 +27,8 @@ namespace Game.Levels
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
         }
-        private void btnLevels_Click(object sender, EventArgs e)
+
+        private void BtnLevels_Click_1(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to quit this level?", "Menu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 

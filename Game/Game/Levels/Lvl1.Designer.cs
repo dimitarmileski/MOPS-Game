@@ -35,7 +35,6 @@
             this.block7 = new System.Windows.Forms.PictureBox();
             this.block6 = new System.Windows.Forms.PictureBox();
             this.block5 = new System.Windows.Forms.PictureBox();
-            this.btnLevels = new System.Windows.Forms.Button();
             this.Star = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.controls = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.bad_guy = new System.Windows.Forms.PictureBox();
             this.GameOver = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btnLevels = new System.Windows.Forms.Button();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block6)).BeginInit();
@@ -73,10 +73,10 @@
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
             this.screen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.screen.Controls.Add(this.btnLevels);
             this.screen.Controls.Add(this.block7);
             this.screen.Controls.Add(this.block6);
             this.screen.Controls.Add(this.block5);
-            this.screen.Controls.Add(this.btnLevels);
             this.screen.Controls.Add(this.Star);
             this.screen.Controls.Add(this.player);
             this.screen.Controls.Add(this.controls);
@@ -133,20 +133,6 @@
             this.block5.TabIndex = 12;
             this.block5.TabStop = false;
             // 
-            // btnLevels
-            // 
-            this.btnLevels.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnLevels.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLevels.ForeColor = System.Drawing.Color.Indigo;
-            this.btnLevels.Location = new System.Drawing.Point(0, 28);
-            this.btnLevels.Name = "btnLevels";
-            this.btnLevels.Size = new System.Drawing.Size(140, 38);
-            this.btnLevels.TabIndex = 11;
-            this.btnLevels.TabStop = false;
-            this.btnLevels.Text = "Levels";
-            this.btnLevels.UseVisualStyleBackColor = false;
-            this.btnLevels.Click += new System.EventHandler(this.btnLevels_Click);
-            // 
             // Star
             // 
             this.Star.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -191,7 +177,7 @@
             this.score.Enabled = false;
             this.score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.score.ForeColor = System.Drawing.Color.Black;
-            this.score.Location = new System.Drawing.Point(0, 0);
+            this.score.Location = new System.Drawing.Point(0, 56);
             this.score.Name = "score";
             this.score.Size = new System.Drawing.Size(140, 30);
             this.score.TabIndex = 6;
@@ -290,6 +276,20 @@
             this.timer2.Enabled = true;
             this.timer2.Interval = 1;
             // 
+            // btnLevels
+            // 
+            this.btnLevels.BackColor = System.Drawing.Color.DarkGray;
+            this.btnLevels.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLevels.ForeColor = System.Drawing.Color.White;
+            this.btnLevels.Location = new System.Drawing.Point(0, -4);
+            this.btnLevels.Name = "btnLevels";
+            this.btnLevels.Size = new System.Drawing.Size(208, 64);
+            this.btnLevels.TabIndex = 17;
+            this.btnLevels.TabStop = false;
+            this.btnLevels.Text = "< Levels";
+            this.btnLevels.UseVisualStyleBackColor = false;
+            this.btnLevels.Click += new System.EventHandler(this.BtnLevels_Click);
+            // 
             // Lvl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,7 +322,6 @@
         #endregion
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel screen;
-        private System.Windows.Forms.Button btnLevels;
         private System.Windows.Forms.PictureBox Star;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.TextBox controls;
@@ -338,5 +337,6 @@
         private System.Windows.Forms.PictureBox block5;
         private System.Windows.Forms.PictureBox block6;
         private System.Windows.Forms.PictureBox block7;
+        private System.Windows.Forms.Button btnLevels;
     }
 }

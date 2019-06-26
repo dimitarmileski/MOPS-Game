@@ -544,7 +544,7 @@ namespace Game.Levels
             if (e.KeyCode == Keys.Space) { glitch = false; }
         }
 
-        private void btnLevels_Click(object sender, EventArgs e)
+        private void BtnLevels_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to quit this level?", "Menu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -562,7 +562,7 @@ namespace Game.Levels
             Application.Run(new LevelsForm());
         }
 
-       
+        
     }
 }
 
