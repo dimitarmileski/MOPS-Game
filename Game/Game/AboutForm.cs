@@ -19,6 +19,7 @@ namespace Game
         public AboutForm()
         {
             InitializeComponent();
+            this.BackColor = Color.White;
         }
 
         private void AboutForm_Load(object sender, EventArgs e)
@@ -27,7 +28,7 @@ namespace Game
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
         }
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void BtnMenu_Click_1(object sender, EventArgs e)
         {
             this.Close();
             th = new Thread(openNewWinForm);
@@ -35,12 +36,10 @@ namespace Game
             th.Start();
         }
 
-
         private void openNewWinForm(object obj)
         {
             Application.Run(new MenuForm());
         }
 
-       
     }
 }
