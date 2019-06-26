@@ -28,7 +28,7 @@ namespace Game
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void BtnMenu_Click_1(object sender, EventArgs e)
         {
             this.Close();
             th = new Thread(openNewWinForm);
@@ -50,6 +50,6 @@ namespace Game
             }
         }
 
-        
+       
     }
 }
