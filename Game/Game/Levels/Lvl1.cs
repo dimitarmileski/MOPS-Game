@@ -67,6 +67,7 @@ namespace Game.Levels
             gameOver.SoundLocation = "GameOver.wav";
             backgroundSound.Play();
             score.Text = "Score : " + points;
+            score.ForeColor = Color.Black;
             this.DoubleBuffered = true;
 
             initPositions();
@@ -76,7 +77,7 @@ namespace Game.Levels
 
         private void initPositions()
         {
-            Star.Location = new Point(this.Width-(this.Width/6), Star.Height/2);
+            Star.Location = new Point(this.Width-(this.Width/6), 5);
 
             Random rnd = new Random();
 
@@ -102,20 +103,20 @@ namespace Game.Levels
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
-            GameOver.ImageLocation = "http://i.imgur.com/0hUyqsP.jpg"; //path to image
-            GameOver.Visible = true;
+            //GameOver.ImageLocation = "http://i.imgur.com/0hUyqsP.jpg"; //path to image
+            //GameOver.Visible = true;
         }
 
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             //player textures
-            if (left == false && right == false && jump == false) { player.Image = Image.FromFile("stand.png"); } //standing 
-            if (left == true && jump == true) { player.Image = Image.FromFile("jumpleft.png"); } //jumping to the left side
-            if (right == true && jump == true) { player.Image = Image.FromFile("jumpright.png"); } //jumping to the right side
-            if (left == true && jump == false && glitch == false) { player.Image = Image.FromFile("walkleft.gif"); glitch = true; } //moving to the left side
-            if (right == true && jump == false && glitch == false) { player.Image = Image.FromFile("walkright.gif"); glitch = true; } //moving to the right side
-            if (left == false && right == false && jump == true) { player.Image = Image.FromFile("jumpright.png"); } //jumping on one place
+            if (left == false && right == false && jump == false) { player.Image = Image.FromFile("dogstanding.gif"); } //standing 
+            if (left == true && jump == true) { player.Image = Image.FromFile("dogleftjump.gif"); } //jumping to the left side
+            if (right == true && jump == true) { player.Image = Image.FromFile("dogrightjump.gif"); } //jumping to the right side
+            if (left == true && jump == false && glitch == false) { player.Image = Image.FromFile("dogwalkingleft.gif"); glitch = true; } //moving to the left side
+            if (right == true && jump == false && glitch == false) { player.Image = Image.FromFile("dogwalkingright.gif"); glitch = true; } //moving to the right side
+            if (left == false && right == false && jump == true) { player.Image = Image.FromFile("dogjump.gif"); } //jumping on one place
 
             if (isCatched == true) //game over (when in contact with badGuy
             {

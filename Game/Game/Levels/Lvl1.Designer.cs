@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lvl1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.screen = new System.Windows.Forms.Panel();
+            this.block7 = new System.Windows.Forms.PictureBox();
+            this.block6 = new System.Windows.Forms.PictureBox();
+            this.block5 = new System.Windows.Forms.PictureBox();
             this.btnLevels = new System.Windows.Forms.Button();
             this.Star = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
@@ -45,10 +48,10 @@
             this.bad_guy = new System.Windows.Forms.PictureBox();
             this.GameOver = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.block5 = new System.Windows.Forms.PictureBox();
-            this.block6 = new System.Windows.Forms.PictureBox();
-            this.block7 = new System.Windows.Forms.PictureBox();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Star)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block4)).BeginInit();
@@ -58,9 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.block0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bad_guy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -94,24 +94,66 @@
             this.screen.Size = new System.Drawing.Size(1184, 851);
             this.screen.TabIndex = 1;
             // 
+            // block7
+            // 
+            this.block7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.block7.BackColor = System.Drawing.Color.Transparent;
+            this.block7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.block7.Image = global::Game.Properties.Resources._0;
+            this.block7.Location = new System.Drawing.Point(338, 824);
+            this.block7.Name = "block7";
+            this.block7.Size = new System.Drawing.Size(500, 15);
+            this.block7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.block7.TabIndex = 14;
+            this.block7.TabStop = false;
+            // 
+            // block6
+            // 
+            this.block6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.block6.BackColor = System.Drawing.Color.Transparent;
+            this.block6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.block6.Image = global::Game.Properties.Resources._0;
+            this.block6.Location = new System.Drawing.Point(338, 784);
+            this.block6.Name = "block6";
+            this.block6.Size = new System.Drawing.Size(500, 15);
+            this.block6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.block6.TabIndex = 13;
+            this.block6.TabStop = false;
+            // 
+            // block5
+            // 
+            this.block5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.block5.BackColor = System.Drawing.Color.Transparent;
+            this.block5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.block5.Image = global::Game.Properties.Resources._0;
+            this.block5.Location = new System.Drawing.Point(338, 701);
+            this.block5.Name = "block5";
+            this.block5.Size = new System.Drawing.Size(500, 15);
+            this.block5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.block5.TabIndex = 12;
+            this.block5.TabStop = false;
+            // 
             // btnLevels
             // 
-            this.btnLevels.Location = new System.Drawing.Point(12, 43);
+            this.btnLevels.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnLevels.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLevels.ForeColor = System.Drawing.Color.Indigo;
+            this.btnLevels.Location = new System.Drawing.Point(0, 28);
             this.btnLevels.Name = "btnLevels";
-            this.btnLevels.Size = new System.Drawing.Size(75, 23);
+            this.btnLevels.Size = new System.Drawing.Size(140, 38);
             this.btnLevels.TabIndex = 11;
             this.btnLevels.TabStop = false;
             this.btnLevels.Text = "Levels";
-            this.btnLevels.UseVisualStyleBackColor = true;
+            this.btnLevels.UseVisualStyleBackColor = false;
             this.btnLevels.Click += new System.EventHandler(this.btnLevels_Click);
             // 
             // Star
             // 
             this.Star.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Star.Image = ((System.Drawing.Image)(resources.GetObject("Star.Image")));
-            this.Star.Location = new System.Drawing.Point(584, 10);
+            this.Star.Location = new System.Drawing.Point(588, -4);
             this.Star.Name = "Star";
-            this.Star.Size = new System.Drawing.Size(32, 54);
+            this.Star.Size = new System.Drawing.Size(60, 60);
             this.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Star.TabIndex = 8;
             this.Star.TabStop = false;
@@ -132,9 +174,11 @@
             // controls
             // 
             this.controls.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.controls.BackColor = System.Drawing.SystemColors.Info;
+            this.controls.BackColor = System.Drawing.Color.Gainsboro;
+            this.controls.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.controls.Enabled = false;
-            this.controls.Location = new System.Drawing.Point(762, 3);
+            this.controls.ForeColor = System.Drawing.Color.Black;
+            this.controls.Location = new System.Drawing.Point(788, 3);
             this.controls.Name = "controls";
             this.controls.Size = new System.Drawing.Size(384, 22);
             this.controls.TabIndex = 10;
@@ -142,12 +186,14 @@
             // 
             // score
             // 
-            this.score.BackColor = System.Drawing.SystemColors.Info;
+            this.score.BackColor = System.Drawing.Color.Gainsboro;
+            this.score.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.score.Enabled = false;
             this.score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.score.ForeColor = System.Drawing.Color.Black;
             this.score.Location = new System.Drawing.Point(0, 0);
             this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(143, 37);
+            this.score.Size = new System.Drawing.Size(140, 30);
             this.score.TabIndex = 6;
             // 
             // block4
@@ -244,45 +290,6 @@
             this.timer2.Enabled = true;
             this.timer2.Interval = 1;
             // 
-            // block5
-            // 
-            this.block5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.block5.BackColor = System.Drawing.Color.Transparent;
-            this.block5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block5.Image = global::Game.Properties.Resources._0;
-            this.block5.Location = new System.Drawing.Point(338, 701);
-            this.block5.Name = "block5";
-            this.block5.Size = new System.Drawing.Size(500, 15);
-            this.block5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.block5.TabIndex = 12;
-            this.block5.TabStop = false;
-            // 
-            // block6
-            // 
-            this.block6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.block6.BackColor = System.Drawing.Color.Transparent;
-            this.block6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block6.Image = global::Game.Properties.Resources._0;
-            this.block6.Location = new System.Drawing.Point(338, 784);
-            this.block6.Name = "block6";
-            this.block6.Size = new System.Drawing.Size(500, 15);
-            this.block6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.block6.TabIndex = 13;
-            this.block6.TabStop = false;
-            // 
-            // block7
-            // 
-            this.block7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.block7.BackColor = System.Drawing.Color.Transparent;
-            this.block7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block7.Image = global::Game.Properties.Resources._0;
-            this.block7.Location = new System.Drawing.Point(338, 824);
-            this.block7.Name = "block7";
-            this.block7.Size = new System.Drawing.Size(500, 15);
-            this.block7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.block7.TabIndex = 14;
-            this.block7.TabStop = false;
-            // 
             // Lvl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -296,6 +303,9 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Lvl1_KeyUp);
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.block7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Star)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block4)).EndInit();
@@ -305,9 +315,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.block0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bad_guy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block7)).EndInit();
             this.ResumeLayout(false);
 
         }
