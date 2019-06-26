@@ -69,6 +69,7 @@
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(319, 96);
             this.btnMenu.TabIndex = 4;
+            this.btnMenu.TabStop = false;
             this.btnMenu.Text = "< Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.BtnMenu_Click_1);

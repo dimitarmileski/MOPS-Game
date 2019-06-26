@@ -69,7 +69,7 @@ namespace Game
 
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void BtnMenu_Click(object sender, EventArgs e)
         {
             this.Close();
             th = new Thread(openNewWinForm);
@@ -235,6 +235,6 @@ namespace Game
             openLevelForm();
         }
 
-      
+        
     }
 }

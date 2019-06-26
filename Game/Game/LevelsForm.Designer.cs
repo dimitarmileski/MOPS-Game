@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnMenu = new System.Windows.Forms.Button();
             this.picBoxLvl1 = new System.Windows.Forms.PictureBox();
             this.picBoxLvl2 = new System.Windows.Forms.PictureBox();
             this.picBoxLvl3 = new System.Windows.Forms.PictureBox();
@@ -59,6 +58,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.btnMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl3)).BeginInit();
@@ -76,20 +76,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl15)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnMenu
-            // 
-            this.btnMenu.Location = new System.Drawing.Point(12, 12);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(75, 23);
-            this.btnMenu.TabIndex = 0;
-            this.btnMenu.Text = "Menu";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
             // picBoxLvl1
             // 
             this.picBoxLvl1.BackColor = System.Drawing.Color.YellowGreen;
-            this.picBoxLvl1.Location = new System.Drawing.Point(46, 71);
+            this.picBoxLvl1.Location = new System.Drawing.Point(56, 224);
             this.picBoxLvl1.Name = "picBoxLvl1";
             this.picBoxLvl1.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl1.TabIndex = 1;
@@ -99,7 +89,7 @@
             // picBoxLvl2
             // 
             this.picBoxLvl2.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl2.Location = new System.Drawing.Point(209, 71);
+            this.picBoxLvl2.Location = new System.Drawing.Point(209, 224);
             this.picBoxLvl2.Name = "picBoxLvl2";
             this.picBoxLvl2.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl2.TabIndex = 2;
@@ -109,7 +99,7 @@
             // picBoxLvl3
             // 
             this.picBoxLvl3.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl3.Location = new System.Drawing.Point(357, 71);
+            this.picBoxLvl3.Location = new System.Drawing.Point(357, 224);
             this.picBoxLvl3.Name = "picBoxLvl3";
             this.picBoxLvl3.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl3.TabIndex = 3;
@@ -119,7 +109,7 @@
             // picBoxLvl4
             // 
             this.picBoxLvl4.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl4.Location = new System.Drawing.Point(509, 71);
+            this.picBoxLvl4.Location = new System.Drawing.Point(509, 224);
             this.picBoxLvl4.Name = "picBoxLvl4";
             this.picBoxLvl4.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl4.TabIndex = 4;
@@ -129,7 +119,7 @@
             // picBoxLvl5
             // 
             this.picBoxLvl5.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl5.Location = new System.Drawing.Point(669, 71);
+            this.picBoxLvl5.Location = new System.Drawing.Point(669, 224);
             this.picBoxLvl5.Name = "picBoxLvl5";
             this.picBoxLvl5.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl5.TabIndex = 5;
@@ -139,7 +129,7 @@
             // picBoxLvl6
             // 
             this.picBoxLvl6.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl6.Location = new System.Drawing.Point(46, 199);
+            this.picBoxLvl6.Location = new System.Drawing.Point(46, 335);
             this.picBoxLvl6.Name = "picBoxLvl6";
             this.picBoxLvl6.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl6.TabIndex = 6;
@@ -149,7 +139,7 @@
             // picBoxLvl7
             // 
             this.picBoxLvl7.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl7.Location = new System.Drawing.Point(209, 199);
+            this.picBoxLvl7.Location = new System.Drawing.Point(209, 335);
             this.picBoxLvl7.Name = "picBoxLvl7";
             this.picBoxLvl7.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl7.TabIndex = 7;
@@ -159,7 +149,7 @@
             // picBoxLvl8
             // 
             this.picBoxLvl8.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl8.Location = new System.Drawing.Point(357, 199);
+            this.picBoxLvl8.Location = new System.Drawing.Point(366, 335);
             this.picBoxLvl8.Name = "picBoxLvl8";
             this.picBoxLvl8.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl8.TabIndex = 8;
@@ -169,7 +159,7 @@
             // picBoxLvl9
             // 
             this.picBoxLvl9.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl9.Location = new System.Drawing.Point(509, 199);
+            this.picBoxLvl9.Location = new System.Drawing.Point(509, 335);
             this.picBoxLvl9.Name = "picBoxLvl9";
             this.picBoxLvl9.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl9.TabIndex = 9;
@@ -179,7 +169,7 @@
             // picBoxLvl10
             // 
             this.picBoxLvl10.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl10.Location = new System.Drawing.Point(669, 199);
+            this.picBoxLvl10.Location = new System.Drawing.Point(669, 335);
             this.picBoxLvl10.Name = "picBoxLvl10";
             this.picBoxLvl10.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl10.TabIndex = 10;
@@ -189,7 +179,7 @@
             // picBoxLvl11
             // 
             this.picBoxLvl11.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl11.Location = new System.Drawing.Point(46, 328);
+            this.picBoxLvl11.Location = new System.Drawing.Point(46, 451);
             this.picBoxLvl11.Name = "picBoxLvl11";
             this.picBoxLvl11.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl11.TabIndex = 11;
@@ -199,7 +189,7 @@
             // picBoxLvl12
             // 
             this.picBoxLvl12.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl12.Location = new System.Drawing.Point(209, 328);
+            this.picBoxLvl12.Location = new System.Drawing.Point(209, 451);
             this.picBoxLvl12.Name = "picBoxLvl12";
             this.picBoxLvl12.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl12.TabIndex = 12;
@@ -209,7 +199,7 @@
             // picBoxLvl13
             // 
             this.picBoxLvl13.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl13.Location = new System.Drawing.Point(357, 328);
+            this.picBoxLvl13.Location = new System.Drawing.Point(366, 451);
             this.picBoxLvl13.Name = "picBoxLvl13";
             this.picBoxLvl13.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl13.TabIndex = 13;
@@ -219,7 +209,7 @@
             // picBoxLvl14
             // 
             this.picBoxLvl14.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl14.Location = new System.Drawing.Point(509, 328);
+            this.picBoxLvl14.Location = new System.Drawing.Point(509, 451);
             this.picBoxLvl14.Name = "picBoxLvl14";
             this.picBoxLvl14.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl14.TabIndex = 14;
@@ -229,7 +219,7 @@
             // picBoxLvl15
             // 
             this.picBoxLvl15.BackColor = System.Drawing.Color.Crimson;
-            this.picBoxLvl15.Location = new System.Drawing.Point(669, 328);
+            this.picBoxLvl15.Location = new System.Drawing.Point(669, 451);
             this.picBoxLvl15.Name = "picBoxLvl15";
             this.picBoxLvl15.Size = new System.Drawing.Size(110, 70);
             this.picBoxLvl15.TabIndex = 15;
@@ -239,7 +229,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 144);
+            this.label1.Location = new System.Drawing.Point(77, 297);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 17);
             this.label1.TabIndex = 16;
@@ -248,7 +238,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(242, 144);
+            this.label2.Location = new System.Drawing.Point(242, 297);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 17;
@@ -257,7 +247,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(394, 144);
+            this.label3.Location = new System.Drawing.Point(394, 297);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 17);
             this.label3.TabIndex = 18;
@@ -266,7 +256,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(543, 144);
+            this.label4.Location = new System.Drawing.Point(535, 297);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 17);
             this.label4.TabIndex = 19;
@@ -275,7 +265,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(703, 144);
+            this.label5.Location = new System.Drawing.Point(695, 297);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 17);
             this.label5.TabIndex = 20;
@@ -284,7 +274,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(394, 272);
+            this.label6.Location = new System.Drawing.Point(394, 417);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 17);
             this.label6.TabIndex = 21;
@@ -293,7 +283,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(77, 272);
+            this.label7.Location = new System.Drawing.Point(77, 417);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 17);
             this.label7.TabIndex = 21;
@@ -302,7 +292,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(242, 272);
+            this.label8.Location = new System.Drawing.Point(234, 417);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 17);
             this.label8.TabIndex = 22;
@@ -311,7 +301,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(543, 272);
+            this.label9.Location = new System.Drawing.Point(535, 417);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 17);
             this.label9.TabIndex = 23;
@@ -320,7 +310,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(695, 272);
+            this.label10.Location = new System.Drawing.Point(703, 417);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 17);
             this.label10.TabIndex = 24;
@@ -329,7 +319,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(77, 401);
+            this.label11.Location = new System.Drawing.Point(77, 542);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 17);
             this.label11.TabIndex = 25;
@@ -338,7 +328,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(242, 401);
+            this.label12.Location = new System.Drawing.Point(234, 542);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 17);
             this.label12.TabIndex = 26;
@@ -347,7 +337,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(386, 401);
+            this.label13.Location = new System.Drawing.Point(386, 542);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(62, 17);
             this.label13.TabIndex = 27;
@@ -356,7 +346,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(535, 401);
+            this.label14.Location = new System.Drawing.Point(535, 542);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 17);
             this.label14.TabIndex = 28;
@@ -365,17 +355,32 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(703, 401);
+            this.label15.Location = new System.Drawing.Point(695, 542);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(54, 17);
             this.label15.TabIndex = 29;
             this.label15.Text = "label15";
             // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.DarkGray;
+            this.btnMenu.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.ForeColor = System.Drawing.Color.White;
+            this.btnMenu.Location = new System.Drawing.Point(0, 0);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(319, 96);
+            this.btnMenu.TabIndex = 30;
+            this.btnMenu.TabStop = false;
+            this.btnMenu.Text = "< Menu";
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
+            // 
             // LevelsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 453);
+            this.ClientSize = new System.Drawing.Size(1014, 583);
+            this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -406,7 +411,6 @@
             this.Controls.Add(this.picBoxLvl3);
             this.Controls.Add(this.picBoxLvl2);
             this.Controls.Add(this.picBoxLvl1);
-            this.Controls.Add(this.btnMenu);
             this.Name = "LevelsForm";
             this.Text = "LevelsForm";
             this.Load += new System.EventHandler(this.LevelsForm_Load);
@@ -431,8 +435,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.PictureBox picBoxLvl1;
         private System.Windows.Forms.PictureBox picBoxLvl2;
         private System.Windows.Forms.PictureBox picBoxLvl3;
@@ -463,5 +465,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnMenu;
     }
 }

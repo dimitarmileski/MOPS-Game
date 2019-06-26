@@ -45,7 +45,7 @@
             this.lblSound.ForeColor = System.Drawing.Color.DimGray;
             this.lblSound.Location = new System.Drawing.Point(57, 229);
             this.lblSound.Name = "lblSound";
-            this.lblSound.Size = new System.Drawing.Size(112, 40);
+            this.lblSound.Size = new System.Drawing.Size(107, 38);
             this.lblSound.TabIndex = 1;
             this.lblSound.Text = "Music";
             // 
@@ -71,6 +71,7 @@
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(319, 96);
             this.btnMenu.TabIndex = 5;
+            this.btnMenu.TabStop = false;
             this.btnMenu.Text = "< Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.BtnMenu_Click_1);

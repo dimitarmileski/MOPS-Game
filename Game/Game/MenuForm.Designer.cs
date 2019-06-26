@@ -49,6 +49,7 @@
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(319, 96);
             this.btnStart.TabIndex = 0;
+            this.btnStart.TabStop = false;
             this.btnStart.Text = "> Start";
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
@@ -62,6 +63,7 @@
             this.btnOptions.Name = "btnOptions";
             this.btnOptions.Size = new System.Drawing.Size(319, 96);
             this.btnOptions.TabIndex = 1;
+            this.btnOptions.TabStop = false;
             this.btnOptions.Text = "⦾ Options";
             this.btnOptions.UseVisualStyleBackColor = false;
             this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
@@ -75,6 +77,7 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(319, 96);
             this.btnExit.TabIndex = 2;
+            this.btnExit.TabStop = false;
             this.btnExit.Text = "☢ Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -88,6 +91,7 @@
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(319, 96);
             this.btnAbout.TabIndex = 3;
+            this.btnAbout.TabStop = false;
             this.btnAbout.Text = "⦾  About";
             this.btnAbout.UseVisualStyleBackColor = false;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
