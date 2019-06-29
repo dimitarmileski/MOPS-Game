@@ -27,22 +27,82 @@ namespace Game
         {
             InitializeComponent();
             levelSelected = "";
-            
+            this.DoubleBuffered = true;
+            this.BackColor = Color.White;
+
             initLevelsBoxes();
-            
+
+        }
+
+        protected override CreateParams CreateParams // this activates DB and removes flickering and tearing!
+        {
+            get
+            {
+                // Activate double buffering at the form level.  All child controls will be double buffered as well.
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED
+                return cp;
+            }
         }
 
         private void LevelsForm_Load(object sender, EventArgs e)
         {
+            //Full Screen
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+            //
+
+            lvlPnl.Size = new Size(this.Width, this.Height / 2);
+            lvlPnl.Location = new Point(0, this.Height / 2 - (lvlPnl.Height/2));
+
+            for (int i = 0; i < levelsBoxes.Count(); i++)
+            {
+                levelsBoxes[i].Size = new Size(this.Width / 15, this.Height);
+            }
+
+
+            for (int i = 0; i < levelsBoxes.Count(); i++)
+            {
+                Label label = new Label();
+
+                label.Text = "Level " + (i + 1);
+
+                label.Location = new Point(levelsBoxes[i].Location.X, levelsBoxes[i].Location.Y + levelsBoxes[i].Height / 3);
+                label.BringToFront();
+                label.Size = new Size(levelsBoxes[i].Width, 80);
+                label.BackColor = Color.DarkGray;
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.Font = new Font("Consolas", 10, FontStyle.Bold);
+                label.ForeColor = Color.White;
+                this.Controls.Add(label);
+            }
+
+            lblHelp.Location = new Point(this.Width/2 - (lblHelp.Width), this.Height-20);
+            lblHelp.Text = "Click on level to play";
+            lblHelp.ForeColor = Color.DarkGray;
+
+            lblGreen.Location = new Point(this.Width / 2 - (lblGreen.Width), this.Height - 50);
+            lblGreen.ForeColor = Color.DarkGray;
+
+            lblYellow.Location = new Point(this.Width / 2 - (lblGreen.Width), this.Height - 70);
+            lblYellow.ForeColor = Color.DarkGray;
+
+            lblPassed.Location = new Point(this.Width / 2 , this.Height - 50);
+            lblPassed.ForeColor = Color.DarkGray;
+            lblNotPassed.Location = new Point(this.Width / 2, this.Height - 70);
+            lblNotPassed.ForeColor = Color.DarkGray;
+            lblHelp.ForeColor = Color.DarkGray;
+
+            picBoxDog.Location = new Point(this.Width - picBoxDog.Width, this.Height - picBoxDog.Height);
+
+
         }
 
         private void initLevelsBoxes()
         {
             levelsBoxes = new List<PictureBox>();
-
+           
             levelsBoxes.Add(picBoxLvl1);
             levelsBoxes.Add(picBoxLvl2);
             levelsBoxes.Add(picBoxLvl3);
@@ -61,10 +121,10 @@ namespace Game
 
             for (int i = 0; i < levelsBoxes.Count(); i++)
             {
-                if (LevelsState.levelPassed[i]) 
+                if (LevelsState.levelPassed[i])
                     levelsBoxes[i].BackColor = Color.YellowGreen;
                 else
-                    levelsBoxes[i].BackColor = Color.Crimson;
+                    levelsBoxes[i].BackColor = Color.Goldenrod;
             }
 
         }
@@ -235,6 +295,6 @@ namespace Game
             openLevelForm();
         }
 
-        
+
     }
 }

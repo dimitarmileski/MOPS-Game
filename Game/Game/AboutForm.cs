@@ -20,13 +20,19 @@ namespace Game
         {
             InitializeComponent();
             this.BackColor = Color.White;
+            this.DoubleBuffered = true;
+
+            
         }
 
+       
         private void AboutForm_Load(object sender, EventArgs e)
         {
+            //Full Screen
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+            //
         }
         private void BtnMenu_Click_1(object sender, EventArgs e)
         {

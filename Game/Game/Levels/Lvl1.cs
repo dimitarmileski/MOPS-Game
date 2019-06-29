@@ -99,9 +99,11 @@ namespace Game.Levels
 
         private void Lvl1_Load(object sender, EventArgs e)
         {
+            //Full Screen
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+            //
 
             //GameOver.ImageLocation = "http://i.imgur.com/0hUyqsP.jpg"; //path to image
             //GameOver.Visible = true;

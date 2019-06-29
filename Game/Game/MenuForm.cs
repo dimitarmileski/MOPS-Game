@@ -43,9 +43,11 @@ namespace Game
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
+            //Full Screen
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+            //
         }
 
         private void btnStart_Click(object sender, EventArgs e) {

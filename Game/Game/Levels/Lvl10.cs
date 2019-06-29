@@ -23,9 +23,11 @@ namespace Game.Levels
 
         private void Lvl10_Load(object sender, EventArgs e)
         {
+            //Full Screen
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+            //
         }
 
         private void BtnLevels_Click_1(object sender, EventArgs e)
