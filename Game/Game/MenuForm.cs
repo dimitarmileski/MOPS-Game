@@ -39,6 +39,8 @@ namespace Game
                 LevelsState.levelPassed[i] = false;
             }
 
+            GameSound.playGameTheme();
+
         }
 
         private void MenuForm_Load(object sender, EventArgs e)
