@@ -17,6 +17,7 @@ namespace Game.Levels
         System.Media.SoundPlayer backgroundSound = new System.Media.SoundPlayer();
         System.Media.SoundPlayer win = new System.Media.SoundPlayer();
         System.Media.SoundPlayer gameOver = new System.Media.SoundPlayer();
+        private static bool soundToggle = true;
 
         bool right;
         bool left;
@@ -62,10 +63,10 @@ namespace Game.Levels
         public Lvl1()
         { 
             InitializeComponent();
-            backgroundSound.SoundLocation = "BackgroundSound.wav";
+            backgroundSound.SoundLocation = "Mall.wav";
             win.SoundLocation = "GettingTheStar.wav";
             gameOver.SoundLocation = "GameOver.wav";
-            backgroundSound.Play();
+            backgroundSound.PlayLooping();
             score.Text = "Score : " + points;
             score.ForeColor = Color.Black;
             this.DoubleBuffered = true;
@@ -93,7 +94,6 @@ namespace Game.Levels
             block7.Location = new Point(rnd.Next(100, this.Width - 100), 720);
 
 
-
             player.Location = new Point(rnd.Next(100, this.Width - 100), this.Height - player.Height);
         }
 
@@ -105,8 +105,8 @@ namespace Game.Levels
             this.WindowState = FormWindowState.Maximized;
             //
 
-            //GameOver.ImageLocation = "http://i.imgur.com/0hUyqsP.jpg"; //path to image
-            //GameOver.Visible = true;
+            GameOver.Location = new Point(this.Width/2 - (GameOver.Width/2), this.Height/2 - (GameOver.Height/2));
+            GameOver.BringToFront();
         }
 
 
@@ -119,7 +119,7 @@ namespace Game.Levels
             if (left == true && jump == false && glitch == false) { player.Image = Image.FromFile("dogwalkingleft.gif"); glitch = true; } //moving to the left side
             if (right == true && jump == false && glitch == false) { player.Image = Image.FromFile("dogwalkingright.gif"); glitch = true; } //moving to the right side
             if (left == false && right == false && jump == true) { player.Image = Image.FromFile("dogjump.gif"); } //jumping on one place
-
+          
             if (isCatched == true) //game over (when in contact with badGuy
             {
                 timer1.Stop();
@@ -522,7 +522,12 @@ namespace Game.Levels
 
             if (e.KeyCode == Keys.Left) { left = true; }
 
-            if (e.KeyCode == Keys.Escape) { this.Close(); }
+            if (e.KeyCode == Keys.Escape) {
+                this.Close();
+                th = new Thread(openNewWinForm);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
 
             if (jump != true)
             {
@@ -533,7 +538,12 @@ namespace Game.Levels
                 }
             }
 
-            if (e.KeyCode == Keys.Enter) { Application.Restart(); }
+            if (e.KeyCode == Keys.Enter) {
+                this.Close();
+                th = new Thread(restartForm);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
         }
 
 
@@ -550,6 +560,8 @@ namespace Game.Levels
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to quit this level?", "Menu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            backgroundSound.Stop();
+
             if (dialogResult == DialogResult.Yes)
             {
                 this.Close();
@@ -564,7 +576,28 @@ namespace Game.Levels
             Application.Run(new LevelsForm());
         }
 
-        
+
+        private void restartForm(object obj) {
+            Application.Run(new Lvl1());
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            if (soundToggle)
+            {
+                picBoxSound.Image = Image.FromFile("speakerOff.png");
+                backgroundSound.Stop();
+                soundToggle = false;
+            }
+            else {
+                picBoxSound.Image = Image.FromFile("speakerOn.png");
+                backgroundSound.PlayLooping();
+                soundToggle = true;
+            }
+           
+        }
+
+       
     }
 }
 

@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lvl1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.screen = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.picBoxSound = new System.Windows.Forms.PictureBox();
+            this.btnLevels = new System.Windows.Forms.Button();
             this.block7 = new System.Windows.Forms.PictureBox();
             this.block6 = new System.Windows.Forms.PictureBox();
             this.block5 = new System.Windows.Forms.PictureBox();
@@ -47,8 +50,8 @@
             this.bad_guy = new System.Windows.Forms.PictureBox();
             this.GameOver = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.btnLevels = new System.Windows.Forms.Button();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block5)).BeginInit();
@@ -73,6 +76,8 @@
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
             this.screen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.screen.Controls.Add(this.label1);
+            this.screen.Controls.Add(this.picBoxSound);
             this.screen.Controls.Add(this.btnLevels);
             this.screen.Controls.Add(this.block7);
             this.screen.Controls.Add(this.block6);
@@ -93,6 +98,42 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(1184, 851);
             this.screen.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label1.Location = new System.Drawing.Point(3, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 20);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Level 1";
+            // 
+            // picBoxSound
+            // 
+            this.picBoxSound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxSound.Image")));
+            this.picBoxSound.Location = new System.Drawing.Point(225, 12);
+            this.picBoxSound.Name = "picBoxSound";
+            this.picBoxSound.Size = new System.Drawing.Size(29, 26);
+            this.picBoxSound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxSound.TabIndex = 19;
+            this.picBoxSound.TabStop = false;
+            this.picBoxSound.Click += new System.EventHandler(this.PictureBox1_Click);
+            // 
+            // btnLevels
+            // 
+            this.btnLevels.BackColor = System.Drawing.Color.DarkGray;
+            this.btnLevels.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLevels.ForeColor = System.Drawing.Color.White;
+            this.btnLevels.Location = new System.Drawing.Point(0, -4);
+            this.btnLevels.Name = "btnLevels";
+            this.btnLevels.Size = new System.Drawing.Size(208, 64);
+            this.btnLevels.TabIndex = 17;
+            this.btnLevels.TabStop = false;
+            this.btnLevels.Text = "< Levels";
+            this.btnLevels.UseVisualStyleBackColor = false;
+            this.btnLevels.Click += new System.EventHandler(this.BtnLevels_Click);
             // 
             // block7
             // 
@@ -138,9 +179,10 @@
             this.Star.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Star.Image = ((System.Drawing.Image)(resources.GetObject("Star.Image")));
             this.Star.Location = new System.Drawing.Point(588, -4);
+            this.Star.Margin = new System.Windows.Forms.Padding(0);
             this.Star.Name = "Star";
-            this.Star.Size = new System.Drawing.Size(60, 60);
-            this.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Star.Size = new System.Drawing.Size(70, 70);
+            this.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Star.TabIndex = 8;
             this.Star.TabStop = false;
             // 
@@ -159,12 +201,12 @@
             // 
             // controls
             // 
-            this.controls.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.controls.BackColor = System.Drawing.Color.Gainsboro;
             this.controls.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.controls.Dock = System.Windows.Forms.DockStyle.Right;
             this.controls.Enabled = false;
             this.controls.ForeColor = System.Drawing.Color.Black;
-            this.controls.Location = new System.Drawing.Point(788, 3);
+            this.controls.Location = new System.Drawing.Point(800, 0);
             this.controls.Name = "controls";
             this.controls.Size = new System.Drawing.Size(384, 22);
             this.controls.TabIndex = 10;
@@ -256,7 +298,7 @@
             this.bad_guy.Location = new System.Drawing.Point(490, 546);
             this.bad_guy.Name = "bad_guy";
             this.bad_guy.Size = new System.Drawing.Size(81, 79);
-            this.bad_guy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bad_guy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.bad_guy.TabIndex = 0;
             this.bad_guy.TabStop = false;
             // 
@@ -265,8 +307,8 @@
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
             this.GameOver.Location = new System.Drawing.Point(0, 0);
             this.GameOver.Name = "GameOver";
-            this.GameOver.Size = new System.Drawing.Size(1200, 700);
-            this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.GameOver.Size = new System.Drawing.Size(1200, 851);
+            this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.GameOver.TabIndex = 9;
             this.GameOver.TabStop = false;
             this.GameOver.Visible = false;
@@ -275,20 +317,6 @@
             // 
             this.timer2.Enabled = true;
             this.timer2.Interval = 1;
-            // 
-            // btnLevels
-            // 
-            this.btnLevels.BackColor = System.Drawing.Color.DarkGray;
-            this.btnLevels.Font = new System.Drawing.Font("Consolas", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLevels.ForeColor = System.Drawing.Color.White;
-            this.btnLevels.Location = new System.Drawing.Point(0, -4);
-            this.btnLevels.Name = "btnLevels";
-            this.btnLevels.Size = new System.Drawing.Size(208, 64);
-            this.btnLevels.TabIndex = 17;
-            this.btnLevels.TabStop = false;
-            this.btnLevels.Text = "< Levels";
-            this.btnLevels.UseVisualStyleBackColor = false;
-            this.btnLevels.Click += new System.EventHandler(this.BtnLevels_Click);
             // 
             // Lvl1
             // 
@@ -303,6 +331,7 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Lvl1_KeyUp);
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block5)).EndInit();
@@ -323,9 +352,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.PictureBox Star;
-        private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.TextBox controls;
-        private System.Windows.Forms.TextBox score;
         private System.Windows.Forms.PictureBox block4;
         private System.Windows.Forms.PictureBox block3;
         private System.Windows.Forms.PictureBox block2;
@@ -338,5 +365,9 @@
         private System.Windows.Forms.PictureBox block6;
         private System.Windows.Forms.PictureBox block7;
         private System.Windows.Forms.Button btnLevels;
+        private System.Windows.Forms.TextBox score;
+        private System.Windows.Forms.PictureBox player;
+        private System.Windows.Forms.PictureBox picBoxSound;
+        private System.Windows.Forms.Label label1;
     }
 }
