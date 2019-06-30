@@ -19,6 +19,13 @@ namespace Game
         public OptionsForm()
         {
             InitializeComponent();
+
+
+            //Game Sound CheckBox
+            if (GameSound.isSoundOn)
+                chkSound.Checked = true;
+            else
+                chkSound.Checked = false;
         }
 
         private void OptionsForm_Load(object sender, EventArgs e)
@@ -46,10 +53,17 @@ namespace Game
 
         private void chkSound_CheckedChanged(object sender, EventArgs e)
         {
-            if (!chkSound.Checked)
-            {
-               //Code for checked
+
+            if (!chkSound.Checked) {
+                GameSound.stopGameTheme();
+                GameSound.isSoundOn = false;
             }
+            else
+            {
+                GameSound.playGameTheme();
+                GameSound.isSoundOn = true;
+            }
+           
         }
 
        

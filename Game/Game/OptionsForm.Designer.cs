@@ -52,13 +52,15 @@
             // chkSound
             // 
             this.chkSound.AutoSize = true;
+            this.chkSound.Checked = true;
+            this.chkSound.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkSound.Font = new System.Drawing.Font("Consolas", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkSound.ForeColor = System.Drawing.Color.DimGray;
             this.chkSound.Location = new System.Drawing.Point(113, 307);
             this.chkSound.Name = "chkSound";
-            this.chkSound.Size = new System.Drawing.Size(112, 37);
+            this.chkSound.Size = new System.Drawing.Size(277, 37);
             this.chkSound.TabIndex = 2;
-            this.chkSound.Text = "Sound";
+            this.chkSound.Text = "Game Theme Sound";
             this.chkSound.UseVisualStyleBackColor = true;
             this.chkSound.CheckedChanged += new System.EventHandler(this.chkSound_CheckedChanged);
             // 
@@ -80,7 +82,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(342, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(505, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(706, 571);
             this.pictureBox1.TabIndex = 6;
@@ -93,14 +95,14 @@
             this.optionsPnl.Dock = System.Windows.Forms.DockStyle.Left;
             this.optionsPnl.Location = new System.Drawing.Point(0, 0);
             this.optionsPnl.Name = "optionsPnl";
-            this.optionsPnl.Size = new System.Drawing.Size(324, 571);
+            this.optionsPnl.Size = new System.Drawing.Size(426, 571);
             this.optionsPnl.TabIndex = 7;
             // 
             // OptionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 571);
+            this.ClientSize = new System.Drawing.Size(1211, 571);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.optionsPnl);

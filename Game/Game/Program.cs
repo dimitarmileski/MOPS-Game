@@ -16,6 +16,12 @@ namespace Game
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //GameSound
+            GameSound.isSoundOn = true;
+
+            //
+
             Application.Run(new MenuForm());
         }
     }

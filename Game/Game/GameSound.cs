@@ -6,21 +6,29 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public static class  GameSound
+    public static class GameSound
     {
-        public static void playGameTheme() {
-            System.Media.SoundPlayer backgroundSound = new System.Media.SoundPlayer();
-            System.Media.SoundPlayer win = new System.Media.SoundPlayer();
-            System.Media.SoundPlayer gameOver = new System.Media.SoundPlayer();
+        public static System.Media.SoundPlayer backgroundSound = new System.Media.SoundPlayer();
+        public static System.Media.SoundPlayer win = new System.Media.SoundPlayer();
+        public static System.Media.SoundPlayer gameOver = new System.Media.SoundPlayer();
 
-            backgroundSound.SoundLocation = "BackgroundSound.wav";
+        public static bool isSoundOn;
+
+        public static void playGameTheme()
+        {
+            backgroundSound.SoundLocation = "GameThemeSong.wav";
             win.SoundLocation = "GettingTheStar.wav";
             gameOver.SoundLocation = "GameOver.wav";
-            backgroundSound.Play();
 
+            backgroundSound.PlayLooping();
         }
 
-        public static void playLevelsTheme() {
+        public static void stopGameTheme() {
+            backgroundSound.Stop();
+        }
+
+        public static void playLevelsTheme()
+        {
 
         }
     }

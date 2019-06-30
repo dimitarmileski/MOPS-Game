@@ -39,7 +39,9 @@ namespace Game
                 LevelsState.levelPassed[i] = false;
             }
 
-            GameSound.playGameTheme();
+            if (GameSound.isSoundOn) {
+                GameSound.playGameTheme();
+            }
 
         }
 
