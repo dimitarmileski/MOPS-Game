@@ -342,7 +342,8 @@
             this.Name = "Lvl2";
             this.Text = "Lvl2";
             this.Load += new System.EventHandler(this.Lvl2_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Lvl2_KeyDown_1);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Lvl2_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Lvl2_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Lvl2_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).EndInit();

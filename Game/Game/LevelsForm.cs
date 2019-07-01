@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -23,6 +26,10 @@ namespace Game
         //Levels Picture Box
         private List<PictureBox> levelsBoxes;
 
+        //Levels State Serilization
+        private string FileName;
+        public static bool[] levelPassed = new bool[15];
+
         public LevelsForm()
         {
             InitializeComponent();
@@ -31,6 +38,11 @@ namespace Game
             this.BackColor = Color.White;
 
             initLevelsBoxes();
+
+            for (int i = 0; i < levelPassed.Count(); i++)
+            {
+                levelPassed[i] = LevelsState.levelPassed[i];
+            }
 
         }
 
@@ -54,7 +66,7 @@ namespace Game
             //
 
             lvlPnl.Size = new Size(this.Width, this.Height / 2);
-            lvlPnl.Location = new Point(0, this.Height / 2 - (lvlPnl.Height/2));
+            lvlPnl.Location = new Point(0, this.Height / 2 - (lvlPnl.Height / 2));
 
             for (int i = 0; i < levelsBoxes.Count(); i++)
             {
@@ -78,7 +90,7 @@ namespace Game
                 this.Controls.Add(label);
             }
 
-            lblHelp.Location = new Point(this.Width/2 - (lblHelp.Width), this.Height-20);
+            lblHelp.Location = new Point(this.Width / 2 - (lblHelp.Width), this.Height - 20);
             lblHelp.Text = "Click on level to play";
             lblHelp.ForeColor = Color.DarkGray;
 
@@ -88,7 +100,7 @@ namespace Game
             lblYellow.Location = new Point(this.Width / 2 - (lblGreen.Width), this.Height - 70);
             lblYellow.ForeColor = Color.DarkGray;
 
-            lblPassed.Location = new Point(this.Width / 2 , this.Height - 50);
+            lblPassed.Location = new Point(this.Width / 2, this.Height - 50);
             lblPassed.ForeColor = Color.DarkGray;
             lblNotPassed.Location = new Point(this.Width / 2, this.Height - 70);
             lblNotPassed.ForeColor = Color.DarkGray;
@@ -102,7 +114,7 @@ namespace Game
         private void initLevelsBoxes()
         {
             levelsBoxes = new List<PictureBox>();
-           
+
             levelsBoxes.Add(picBoxLvl1);
             levelsBoxes.Add(picBoxLvl2);
             levelsBoxes.Add(picBoxLvl3);
@@ -296,5 +308,101 @@ namespace Game
         }
 
 
+        //Levels State Serilization
+
+        private void saveFile()
+        {
+            if (FileName == null)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "LevelsState file (*.lvl)|*.level";
+                saveFileDialog.Title = "Save LevelsState doc";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    FileName = saveFileDialog.FileName;
+                }
+            }
+            if (FileName != null)
+            {
+                using (FileStream fileStream = new FileStream(FileName, FileMode.Create))
+                {
+
+                    IFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(fileStream, levelPassed);
+                }
+            }
+        }
+        private void openFile()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "LevelsState file (*.lvl)|*.level";
+            openFileDialog.Title = "Open LevelsState file";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                FileName = openFileDialog.FileName;
+                try
+                {
+                    using (FileStream fileStream = new FileStream(FileName, FileMode.Open))
+                    {
+                        IFormatter formater = new BinaryFormatter();
+                        levelPassed = (bool [])formater.Deserialize(fileStream);
+
+
+                        for (int i = 0; i < levelPassed.Count(); i++)
+                        {
+                            LevelsState.levelPassed[i] = levelPassed[i];
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Could not read file: " + FileName);
+                    FileName = null;
+                    return;
+                }
+                Invalidate(true);
+            }
+            restartForm();
+        }
+
+        private void restartForm()
+        {
+            this.Close();
+            th = new Thread(LevelsFormOpen);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        public void LevelsFormOpen()
+        {
+            Application.Run(new LevelsForm());
+        }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFile();
+        }
+
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFile();
+        }
+
+        private void NewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < LevelsState.levelPassed.Count(); i++)
+            {
+                LevelsState.levelPassed[i] = false;
+            }
+            restartForm();
+        }
+
+        private void SaveAsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FileName = null;
+            saveFile();
+        }
     }
 }
+
+

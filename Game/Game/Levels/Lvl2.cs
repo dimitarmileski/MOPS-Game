@@ -519,48 +519,6 @@ namespace Game.Levels
             }
         }
 
-        private void Lvl2_KeyDown_1(object sender, KeyEventArgs e)
-        {
-
-            if (e.KeyCode == Keys.Right) { right = true; }
-
-            if (e.KeyCode == Keys.Left) { left = true; }
-
-            if (e.KeyCode == Keys.Escape)
-            {
-                this.Close();
-                th = new Thread(openNewWinForm);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-            }
-
-            if (jump != true)
-            {
-                if (e.KeyCode == Keys.Space)
-                {
-                    jump = true;
-                    Force = G;
-                }
-            }
-
-            if (e.KeyCode == Keys.Enter)
-            {
-                this.Close();
-                th = new Thread(restartForm);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-            }
-        }
-
-        private void Lvl2_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Right) { right = false; glitch = false; }
-
-            if (e.KeyCode == Keys.Left) { left = false; glitch = false; }
-
-            if (e.KeyCode == Keys.Space) { glitch = false; }
-        }
-
 
         private void openNewWinForm(object obj)
         {
@@ -606,7 +564,52 @@ namespace Game.Levels
             }
         }
 
-      
+        private void Lvl2_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+            if (e.KeyCode == Keys.Right) { right = true; }
+
+            if (e.KeyCode == Keys.Left) { left = true; }
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+                th = new Thread(openNewWinForm);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+
+            if (jump != true)
+            {
+                if (e.KeyCode == Keys.Space)
+                {
+                    jump = true;
+                    Force = G;
+                }
+            }
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Close();
+                th = new Thread(restartForm);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+        }
+
+        private void Lvl2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Right) { right = false; glitch = false; }
+
+            if (e.KeyCode == Keys.Left) { left = false; glitch = false; }
+
+            if (e.KeyCode == Keys.Space) { glitch = false; }
+        }
+
+        private void Lvl2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

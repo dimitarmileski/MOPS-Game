@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Game
 {
     [Serializable]
-    public static class LevelsState
+    public class LevelsState
     {
         public static bool [] levelPassed  = new bool[15];
 

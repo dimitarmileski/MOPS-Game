@@ -597,7 +597,6 @@ namespace Game.Levels
            
         }
 
-       
     }
 }
 
