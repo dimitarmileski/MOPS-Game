@@ -47,7 +47,8 @@ namespace Game.Levels
         //Thread for opening new win form
         private Thread th;
 
-        
+        //Level zero based
+        public int level = 0;
 
         protected override CreateParams CreateParams // this activates DB and removes flickering and tearing!
         {
@@ -144,7 +145,7 @@ namespace Game.Levels
                 isWin = false;
                 backgroundSound.Play();
 
-                LevelsState.levelPassed[0] = true;
+                LevelsState.levelPassed[level] = true;
 
             }
 
@@ -556,6 +557,19 @@ namespace Game.Levels
             if (e.KeyCode == Keys.Space) { glitch = false; }
         }
 
+
+        private void Lvl1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Down:
+                case Keys.Left:
+                case Keys.Right:
+                case Keys.Up:
+                    e.IsInputKey = true;
+                    break;
+            }
+        }
         private void BtnLevels_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you want to quit this level?", "Menu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

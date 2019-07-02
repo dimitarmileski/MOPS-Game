@@ -329,6 +329,7 @@
             this.Load += new System.EventHandler(this.Lvl1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Lvl1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Lvl1_KeyUp);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Lvl1_PreviewKeyDown);
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).EndInit();

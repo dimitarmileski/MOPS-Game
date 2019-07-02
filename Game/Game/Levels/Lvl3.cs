@@ -19,9 +19,9 @@ namespace Game.Levels
         System.Media.SoundPlayer gameOver = new System.Media.SoundPlayer();
         private static bool soundToggle = true;
 
-        bool right;
-        bool left;
-        bool jump;
+        bool right = false;
+        bool left = false;
+        bool jump = false;
 
         int G = 20;
         int Force;
@@ -47,6 +47,11 @@ namespace Game.Levels
         //Thread for opening new win form
         private Thread th;
 
+
+        //Level zero based
+        public int level = 2;
+
+
         protected override CreateParams CreateParams // this activates DB and removes flickering and tearing!
         {
             get
@@ -70,7 +75,7 @@ namespace Game.Levels
             this.DoubleBuffered = true;
 
             initPositions();
-            
+
 
         }
 
@@ -106,7 +111,8 @@ namespace Game.Levels
             GameOver.Location = new Point(this.Width / 2 - (GameOver.Width / 2), this.Height / 2 - (GameOver.Height / 2));
             GameOver.BringToFront();
         }
-        private void Timer1_Tick_1(object sender, EventArgs e)
+
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             //player textures
             if (left == false && right == false && jump == false) { player.Image = Image.FromFile("dogstanding.gif"); } //standing 
@@ -140,7 +146,7 @@ namespace Game.Levels
                 isWin = false;
                 backgroundSound.Play();
 
-                LevelsState.levelPassed[0] = true;
+                LevelsState.levelPassed[level] = true;
 
             }
 
@@ -487,7 +493,7 @@ namespace Game.Levels
                 isWin = true;
             }
         }
-        
+
 
         public void physics(System.Windows.Forms.PictureBox block)
         {
@@ -511,10 +517,9 @@ namespace Game.Levels
                 Force = -1;
             }
         }
+
         private void Lvl3_KeyDown(object sender, KeyEventArgs e)
         {
-           
-
             if (e.KeyCode == Keys.Right) { right = true; }
 
             if (e.KeyCode == Keys.Left) { left = true; }
@@ -543,28 +548,29 @@ namespace Game.Levels
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
             }
-
         }
+
 
         private void Lvl3_KeyUp(object sender, KeyEventArgs e)
         {
-
-            if (e.KeyCode == Keys.Right) {right = false; glitch = false; }
+            if (e.KeyCode == Keys.Right) { right = false; glitch = false; }
 
             if (e.KeyCode == Keys.Left) { left = false; glitch = false; }
 
             if (e.KeyCode == Keys.Space) { glitch = false; }
         }
 
-
-        private void openNewWinForm(object obj)
+        private void Lvl3_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            Application.Run(new LevelsForm());
-        }
-
-        private void restartForm(object obj)
-        {
-            Application.Run(new Lvl3());
+            switch (e.KeyCode)
+            {
+                case Keys.Down:
+                case Keys.Left:
+                case Keys.Right:
+                case Keys.Up:
+                    e.IsInputKey = true;
+                    break;
+            }
         }
 
         private void BtnLevel_Click(object sender, EventArgs e)
@@ -580,6 +586,17 @@ namespace Game.Levels
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
             }
+        }
+
+        private void openNewWinForm(object obj)
+        {
+            Application.Run(new LevelsForm());
+        }
+
+
+        private void restartForm(object obj)
+        {
+            Application.Run(new Lvl3());
         }
 
         private void PicBoxSound_Click(object sender, EventArgs e)
@@ -598,10 +615,6 @@ namespace Game.Levels
             }
         }
 
-        private void Timer3_Tick(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

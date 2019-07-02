@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lvl2));
             this.btnLevels = new System.Windows.Forms.Button();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.picBoxSound = new System.Windows.Forms.PictureBox();
             this.btnLevel = new System.Windows.Forms.Button();
@@ -79,11 +78,6 @@
             this.btnLevels.TabStop = false;
             this.btnLevels.Text = "< Levels";
             this.btnLevels.UseVisualStyleBackColor = false;
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 1;
             // 
             // label1
             // 
@@ -343,8 +337,8 @@
             this.Text = "Lvl2";
             this.Load += new System.EventHandler(this.Lvl2_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Lvl2_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Lvl2_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Lvl2_KeyUp);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Lvl2_PreviewKeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block6)).EndInit();
@@ -367,7 +361,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnLevels;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picBoxSound;
         private System.Windows.Forms.Button btnLevel;

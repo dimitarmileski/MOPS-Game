@@ -47,7 +47,8 @@ namespace Game.Levels
         //Thread for opening new win form
         private Thread th;
 
-
+        //Level zero based
+        public int level = 1;
 
         protected override CreateParams CreateParams // this activates DB and removes flickering and tearing!
         {
@@ -76,6 +77,8 @@ namespace Game.Levels
 
         }
 
+
+
         private void initPositions()
         {
             Star.Location = new Point(this.Width - (this.Width / 6), 5);
@@ -96,7 +99,6 @@ namespace Game.Levels
 
             player.Location = new Point(rnd.Next(100, this.Width - 100), this.Height - player.Height);
         }
-
         private void Lvl2_Load(object sender, EventArgs e)
         {
             //Full Screen
@@ -108,10 +110,9 @@ namespace Game.Levels
             GameOver.Location = new Point(this.Width / 2 - (GameOver.Width / 2), this.Height / 2 - (GameOver.Height / 2));
             GameOver.BringToFront();
         }
-
+      
         private void Timer1_Tick(object sender, EventArgs e)
         {
-
             //player textures
             if (left == false && right == false && jump == false) { player.Image = Image.FromFile("dogstanding.gif"); } //standing 
             if (left == true && jump == true) { player.Image = Image.FromFile("dogleftjump.gif"); } //jumping to the left side
@@ -144,7 +145,7 @@ namespace Game.Levels
                 isWin = false;
                 backgroundSound.Play();
 
-                LevelsState.levelPassed[0] = true;
+                LevelsState.levelPassed[level] = true;
 
             }
 
@@ -490,11 +491,7 @@ namespace Game.Levels
 
                 isWin = true;
             }
-
-
-
         }
-
 
         public void physics(System.Windows.Forms.PictureBox block)
         {
@@ -518,55 +515,8 @@ namespace Game.Levels
                 Force = -1;
             }
         }
-
-
-        private void openNewWinForm(object obj)
-        {
-            Application.Run(new LevelsForm());
-        }
-
-
-        private void restartForm(object obj)
-        {
-            Application.Run(new Lvl1());
-        }
-
-        
-
-        private void PicBoxSound_Click(object sender, EventArgs e)
-        {
-            if (soundToggle)
-            {
-                picBoxSound.Image = Image.FromFile("speakerOff.png");
-                backgroundSound.Stop();
-                soundToggle = false;
-            }
-            else
-            {
-                picBoxSound.Image = Image.FromFile("speakerOn.png");
-                backgroundSound.PlayLooping();
-                soundToggle = true;
-            }
-        }
-
-        private void BtnLevel_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Do you want to quit this level?", "Menu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            backgroundSound.Stop();
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                this.Close();
-                th = new Thread(openNewWinForm);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
-            }
-        }
-
         private void Lvl2_KeyDown(object sender, KeyEventArgs e)
         {
-           
             if (e.KeyCode == Keys.Right) { right = true; }
 
             if (e.KeyCode == Keys.Left) { left = true; }
@@ -595,7 +545,9 @@ namespace Game.Levels
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
             }
+
         }
+
 
         private void Lvl2_KeyUp(object sender, KeyEventArgs e)
         {
@@ -606,10 +558,66 @@ namespace Game.Levels
             if (e.KeyCode == Keys.Space) { glitch = false; }
         }
 
-        private void Lvl2_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void Lvl2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            this.Close();
+            switch (e.KeyCode)
+            {
+                case Keys.Down:
+                case Keys.Left:
+                case Keys.Right:
+                case Keys.Up:
+                    e.IsInputKey = true;
+                    break;
+            }
         }
+
+        private void BtnLevel_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you want to quit this level?", "Menu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            backgroundSound.Stop();
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                th = new Thread(openNewWinForm);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+        }
+
+
+
+        private void openNewWinForm(object obj)
+        {
+            Application.Run(new LevelsForm());
+        }
+
+
+        private void restartForm(object obj)
+        {
+            Application.Run(new Lvl1());
+        }
+
+
+        private void PicBoxSound_Click(object sender, EventArgs e)
+        {
+            if (soundToggle)
+            {
+                picBoxSound.Image = Image.FromFile("speakerOff.png");
+                backgroundSound.Stop();
+                soundToggle = false;
+            }
+            else
+            {
+                picBoxSound.Image = Image.FromFile("speakerOn.png");
+                backgroundSound.PlayLooping();
+                soundToggle = true;
+            }
+        }
+
+       
     }
 }
 

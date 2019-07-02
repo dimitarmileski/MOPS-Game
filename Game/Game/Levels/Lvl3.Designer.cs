@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lvl3));
             this.btnLevels = new System.Windows.Forms.Button();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.picBoxSound = new System.Windows.Forms.PictureBox();
             this.btnLevel = new System.Windows.Forms.Button();
@@ -39,7 +38,6 @@
             this.block6 = new System.Windows.Forms.PictureBox();
             this.block5 = new System.Windows.Forms.PictureBox();
             this.Star = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.player = new System.Windows.Forms.PictureBox();
             this.controls = new System.Windows.Forms.TextBox();
             this.score = new System.Windows.Forms.TextBox();
@@ -51,7 +49,7 @@
             this.bad_guy = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
             this.GameOver = new System.Windows.Forms.PictureBox();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block6)).BeginInit();
@@ -80,11 +78,6 @@
             this.btnLevels.TabStop = false;
             this.btnLevels.Text = "< Levels";
             this.btnLevels.UseVisualStyleBackColor = false;
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 1;
             // 
             // label1
             // 
@@ -172,12 +165,6 @@
             this.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.Star.TabIndex = 8;
             this.Star.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick_1);
             // 
             // player
             // 
@@ -327,15 +314,17 @@
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
             this.GameOver.Location = new System.Drawing.Point(0, 0);
             this.GameOver.Name = "GameOver";
-            this.GameOver.Size = new System.Drawing.Size(1200, 851);
-            this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GameOver.Size = new System.Drawing.Size(1200, 700);
+            this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.GameOver.TabIndex = 9;
             this.GameOver.TabStop = false;
             this.GameOver.Visible = false;
             // 
-            // timer3
+            // timer1
             // 
-            this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // Lvl3
             // 
@@ -344,11 +333,13 @@
             this.ClientSize = new System.Drawing.Size(1184, 851);
             this.Controls.Add(this.screen);
             this.Controls.Add(this.btnLevels);
+            this.KeyPreview = true;
             this.Name = "Lvl3";
             this.Text = "Lvl3";
             this.Load += new System.EventHandler(this.Lvl3_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Lvl3_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Lvl3_KeyUp);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Lvl3_PreviewKeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block6)).EndInit();
@@ -371,7 +362,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnLevels;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picBoxSound;
         private System.Windows.Forms.Button btnLevel;
@@ -379,7 +369,6 @@
         private System.Windows.Forms.PictureBox block6;
         private System.Windows.Forms.PictureBox block5;
         private System.Windows.Forms.PictureBox Star;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.TextBox controls;
         private System.Windows.Forms.TextBox score;
@@ -391,6 +380,6 @@
         private System.Windows.Forms.PictureBox bad_guy;
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.PictureBox GameOver;
-        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer1;
     }
 }
