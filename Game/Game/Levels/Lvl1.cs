@@ -74,7 +74,7 @@ namespace Game.Levels
 
             initPositions();
 
-
+          
         }
 
         private void initPositions()
@@ -100,13 +100,14 @@ namespace Game.Levels
 
         private void Lvl1_Load(object sender, EventArgs e)
         {
+
             //Full Screen
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             //
 
-            GameOver.Location = new Point(this.Width/2 - (GameOver.Width/2), this.Height/2 - (GameOver.Height/2));
+            GameOver.Location = new Point(this.Width / 2 - (GameOver.Width / 2), this.Height / 2 - (GameOver.Height / 2));
             GameOver.BringToFront();
         }
 

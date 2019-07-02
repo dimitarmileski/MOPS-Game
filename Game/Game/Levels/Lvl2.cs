@@ -597,7 +597,7 @@ namespace Game.Levels
 
         private void restartForm(object obj)
         {
-            Application.Run(new Lvl1());
+            Application.Run(new Lvl2());
         }
 
 
