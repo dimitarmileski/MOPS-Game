@@ -121,9 +121,9 @@
             this.block7.BackColor = System.Drawing.Color.Transparent;
             this.block7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block7.Image = ((System.Drawing.Image)(resources.GetObject("block7.Image")));
-            this.block7.Location = new System.Drawing.Point(338, 824);
+            this.block7.Location = new System.Drawing.Point(338, 818);
             this.block7.Name = "block7";
-            this.block7.Size = new System.Drawing.Size(500, 15);
+            this.block7.Size = new System.Drawing.Size(500, 21);
             this.block7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block7.TabIndex = 14;
             this.block7.TabStop = false;
@@ -134,9 +134,9 @@
             this.block6.BackColor = System.Drawing.Color.Transparent;
             this.block6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block6.Image = ((System.Drawing.Image)(resources.GetObject("block6.Image")));
-            this.block6.Location = new System.Drawing.Point(338, 784);
+            this.block6.Location = new System.Drawing.Point(338, 775);
             this.block6.Name = "block6";
-            this.block6.Size = new System.Drawing.Size(500, 15);
+            this.block6.Size = new System.Drawing.Size(500, 24);
             this.block6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block6.TabIndex = 13;
             this.block6.TabStop = false;
@@ -149,7 +149,7 @@
             this.block5.Image = ((System.Drawing.Image)(resources.GetObject("block5.Image")));
             this.block5.Location = new System.Drawing.Point(338, 701);
             this.block5.Name = "block5";
-            this.block5.Size = new System.Drawing.Size(500, 15);
+            this.block5.Size = new System.Drawing.Size(500, 22);
             this.block5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block5.TabIndex = 12;
             this.block5.TabStop = false;
@@ -218,7 +218,7 @@
             this.block4.Image = ((System.Drawing.Image)(resources.GetObject("block4.Image")));
             this.block4.Location = new System.Drawing.Point(588, 214);
             this.block4.Name = "block4";
-            this.block4.Size = new System.Drawing.Size(75, 15);
+            this.block4.Size = new System.Drawing.Size(75, 23);
             this.block4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block4.TabIndex = 5;
             this.block4.TabStop = false;
@@ -231,7 +231,7 @@
             this.block3.Image = ((System.Drawing.Image)(resources.GetObject("block3.Image")));
             this.block3.Location = new System.Drawing.Point(838, 314);
             this.block3.Name = "block3";
-            this.block3.Size = new System.Drawing.Size(100, 15);
+            this.block3.Size = new System.Drawing.Size(100, 24);
             this.block3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block3.TabIndex = 4;
             this.block3.TabStop = false;
@@ -242,9 +242,9 @@
             this.block2.BackColor = System.Drawing.Color.Transparent;
             this.block2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block2.Image = ((System.Drawing.Image)(resources.GetObject("block2.Image")));
-            this.block2.Location = new System.Drawing.Point(238, 414);
+            this.block2.Location = new System.Drawing.Point(238, 406);
             this.block2.Name = "block2";
-            this.block2.Size = new System.Drawing.Size(125, 15);
+            this.block2.Size = new System.Drawing.Size(125, 23);
             this.block2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block2.TabIndex = 3;
             this.block2.TabStop = false;
@@ -255,9 +255,9 @@
             this.block1.BackColor = System.Drawing.Color.Transparent;
             this.block1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block1.Image = ((System.Drawing.Image)(resources.GetObject("block1.Image")));
-            this.block1.Location = new System.Drawing.Point(688, 514);
+            this.block1.Location = new System.Drawing.Point(688, 503);
             this.block1.Name = "block1";
-            this.block1.Size = new System.Drawing.Size(150, 15);
+            this.block1.Size = new System.Drawing.Size(150, 26);
             this.block1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block1.TabIndex = 2;
             this.block1.TabStop = false;
@@ -270,7 +270,7 @@
             this.block0.Image = ((System.Drawing.Image)(resources.GetObject("block0.Image")));
             this.block0.Location = new System.Drawing.Point(338, 624);
             this.block0.Name = "block0";
-            this.block0.Size = new System.Drawing.Size(500, 15);
+            this.block0.Size = new System.Drawing.Size(500, 28);
             this.block0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block0.TabIndex = 1;
             this.block0.TabStop = false;

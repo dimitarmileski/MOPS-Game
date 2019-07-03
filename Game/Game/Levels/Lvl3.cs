@@ -615,6 +615,10 @@ namespace Game.Levels
             }
         }
 
+        private void Block0_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
