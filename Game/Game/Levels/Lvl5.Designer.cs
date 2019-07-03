@@ -161,8 +161,8 @@
             this.Star.Location = new System.Drawing.Point(588, -4);
             this.Star.Margin = new System.Windows.Forms.Padding(0);
             this.Star.Name = "Star";
-            this.Star.Size = new System.Drawing.Size(70, 70);
-            this.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Star.Size = new System.Drawing.Size(75, 79);
+            this.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Star.TabIndex = 8;
             this.Star.TabStop = false;
             // 

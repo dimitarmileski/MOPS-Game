@@ -158,11 +158,11 @@
             // 
             this.Star.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Star.Image = ((System.Drawing.Image)(resources.GetObject("Star.Image")));
-            this.Star.Location = new System.Drawing.Point(588, -4);
+            this.Star.Location = new System.Drawing.Point(588, 0);
             this.Star.Margin = new System.Windows.Forms.Padding(0);
             this.Star.Name = "Star";
-            this.Star.Size = new System.Drawing.Size(70, 70);
-            this.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Star.Size = new System.Drawing.Size(65, 64);
+            this.Star.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Star.TabIndex = 8;
             this.Star.TabStop = false;
             // 
