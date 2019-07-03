@@ -120,7 +120,7 @@
             this.block7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.block7.BackColor = System.Drawing.Color.Transparent;
             this.block7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block7.Image = global::Game.Properties.Resources._0;
+            this.block7.Image = ((System.Drawing.Image)(resources.GetObject("block7.Image")));
             this.block7.Location = new System.Drawing.Point(338, 824);
             this.block7.Name = "block7";
             this.block7.Size = new System.Drawing.Size(500, 15);
@@ -133,7 +133,7 @@
             this.block6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.block6.BackColor = System.Drawing.Color.Transparent;
             this.block6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block6.Image = global::Game.Properties.Resources._0;
+            this.block6.Image = ((System.Drawing.Image)(resources.GetObject("block6.Image")));
             this.block6.Location = new System.Drawing.Point(338, 784);
             this.block6.Name = "block6";
             this.block6.Size = new System.Drawing.Size(500, 15);
@@ -146,7 +146,7 @@
             this.block5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.block5.BackColor = System.Drawing.Color.Transparent;
             this.block5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block5.Image = global::Game.Properties.Resources._0;
+            this.block5.Image = ((System.Drawing.Image)(resources.GetObject("block5.Image")));
             this.block5.Location = new System.Drawing.Point(338, 701);
             this.block5.Name = "block5";
             this.block5.Size = new System.Drawing.Size(500, 15);
@@ -215,7 +215,7 @@
             this.block4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.block4.BackColor = System.Drawing.Color.Transparent;
             this.block4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block4.Image = global::Game.Properties.Resources._4;
+            this.block4.Image = ((System.Drawing.Image)(resources.GetObject("block4.Image")));
             this.block4.Location = new System.Drawing.Point(588, 214);
             this.block4.Name = "block4";
             this.block4.Size = new System.Drawing.Size(75, 15);
@@ -228,7 +228,7 @@
             this.block3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.block3.BackColor = System.Drawing.Color.Transparent;
             this.block3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block3.Image = global::Game.Properties.Resources._3;
+            this.block3.Image = ((System.Drawing.Image)(resources.GetObject("block3.Image")));
             this.block3.Location = new System.Drawing.Point(838, 314);
             this.block3.Name = "block3";
             this.block3.Size = new System.Drawing.Size(100, 15);
@@ -241,7 +241,7 @@
             this.block2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.block2.BackColor = System.Drawing.Color.Transparent;
             this.block2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block2.Image = global::Game.Properties.Resources._2;
+            this.block2.Image = ((System.Drawing.Image)(resources.GetObject("block2.Image")));
             this.block2.Location = new System.Drawing.Point(238, 414);
             this.block2.Name = "block2";
             this.block2.Size = new System.Drawing.Size(125, 15);
@@ -254,7 +254,7 @@
             this.block1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.block1.BackColor = System.Drawing.Color.Transparent;
             this.block1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block1.Image = global::Game.Properties.Resources._1;
+            this.block1.Image = ((System.Drawing.Image)(resources.GetObject("block1.Image")));
             this.block1.Location = new System.Drawing.Point(688, 514);
             this.block1.Name = "block1";
             this.block1.Size = new System.Drawing.Size(150, 15);
@@ -267,7 +267,7 @@
             this.block0.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.block0.BackColor = System.Drawing.Color.Transparent;
             this.block0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.block0.Image = global::Game.Properties.Resources._0;
+            this.block0.Image = ((System.Drawing.Image)(resources.GetObject("block0.Image")));
             this.block0.Location = new System.Drawing.Point(338, 624);
             this.block0.Name = "block0";
             this.block0.Size = new System.Drawing.Size(500, 15);
