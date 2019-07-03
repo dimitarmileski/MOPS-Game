@@ -64,7 +64,7 @@ namespace Game.Levels
         public Lvl7()
         {
             InitializeComponent();
-            backgroundSound.SoundLocation = "Mall.wav";
+            backgroundSound.SoundLocation = "Interstellar Odyssey.wav";
             win.SoundLocation = "GettingTheStar.wav";
             gameOver.SoundLocation = "GameOver.wav";
             backgroundSound.PlayLooping();

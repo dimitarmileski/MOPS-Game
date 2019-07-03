@@ -64,7 +64,7 @@ namespace Game.Levels
         public Lvl11()
         {
             InitializeComponent();
-            backgroundSound.SoundLocation = "Mall.wav";
+            backgroundSound.SoundLocation = "Shinrin-Yoku.wav";
             win.SoundLocation = "GettingTheStar.wav";
             gameOver.SoundLocation = "GameOver.wav";
             backgroundSound.PlayLooping();

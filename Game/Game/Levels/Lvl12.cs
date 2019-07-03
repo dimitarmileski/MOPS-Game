@@ -64,7 +64,7 @@ namespace Game.Levels
         public Lvl12()
         {
             InitializeComponent();
-            backgroundSound.SoundLocation = "Mall.wav";
+            backgroundSound.SoundLocation = "Solve The Puzzle.wav";
             win.SoundLocation = "GettingTheStar.wav";
             gameOver.SoundLocation = "GameOver.wav";
             backgroundSound.PlayLooping();
