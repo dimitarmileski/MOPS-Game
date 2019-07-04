@@ -110,6 +110,9 @@ namespace Game.Levels
 
             GameOver.Location = new Point(this.Width / 2 - (GameOver.Width / 2), this.Height / 2 - (GameOver.Height / 2));
             GameOver.BringToFront();
+
+            dragon1.Location = new Point(block2.Location.X + dragon1.Width, block2.Location.Y - dragon1.Height + 30);
+            dragon2.Location = new Point(block3.Location.X + dragon2.Width, block3.Location.Y - dragon2.Height + 30);
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -461,13 +464,13 @@ namespace Game.Levels
             {
                 bad_guy.Left = block0.Right - bad_guy.Width;
                 check_guy1 = false;
-                bad_guy.Image = Image.FromFile("bigbadleft.gif");
+                bad_guy.Image = Image.FromFile("dragonLeft.gif");
             }
             if (bad_guy.Left < block0.Left)
             {
                 bad_guy.Left = block0.Left;
                 check_guy1 = true;
-                bad_guy.Image = Image.FromFile("bigbadright.gif");
+                bad_guy.Image = Image.FromFile("dragonRight.gif");
             }
 
             if (check_guy1 == true) { bad_guy.Left += 4; }
@@ -485,6 +488,17 @@ namespace Game.Levels
 
                 isCatched = true;
             }
+            //collision with dragon (game over)
+            if (player.Right > dragon1.Left && player.Left < dragon1.Right - player.Width && player.Bottom < dragon1.Bottom && player.Bottom > dragon1.Top)
+            {
+                isCatched = true;
+            }
+
+            if (player.Left < dragon1.Right && player.Right > dragon1.Left + player.Width && player.Bottom < dragon1.Bottom && player.Bottom > dragon1.Top)
+            {
+
+                isCatched = true;
+            }
 
             //collision with star (win)
             if (player.Right > Star.Left && player.Left < Star.Right - player.Width && player.Bottom < Star.Bottom && player.Bottom > Star.Top)
@@ -497,6 +511,8 @@ namespace Game.Levels
 
                 isWin = true;
             }
+            dragon1.Location = new Point(block2.Location.X + dragon1.Width, block2.Location.Y - dragon1.Height);
+            dragon2.Location = new Point(block3.Location.X + dragon2.Width, block3.Location.Y - dragon2.Height);
         }
 
 

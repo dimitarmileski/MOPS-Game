@@ -50,6 +50,8 @@
             this.screen = new System.Windows.Forms.Panel();
             this.GameOver = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dragon1 = new System.Windows.Forms.PictureBox();
+            this.dragon2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block6)).BeginInit();
@@ -64,6 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bad_guy)).BeginInit();
             this.screen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dragon1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dragon2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLevels
@@ -225,7 +229,7 @@
             this.block3.Image = ((System.Drawing.Image)(resources.GetObject("block3.Image")));
             this.block3.Location = new System.Drawing.Point(800, 314);
             this.block3.Name = "block3";
-            this.block3.Size = new System.Drawing.Size(100, 25);
+            this.block3.Size = new System.Drawing.Size(150, 25);
             this.block3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block3.TabIndex = 4;
             this.block3.TabStop = false;
@@ -238,7 +242,7 @@
             this.block2.Image = ((System.Drawing.Image)(resources.GetObject("block2.Image")));
             this.block2.Location = new System.Drawing.Point(238, 414);
             this.block2.Name = "block2";
-            this.block2.Size = new System.Drawing.Size(106, 26);
+            this.block2.Size = new System.Drawing.Size(218, 26);
             this.block2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block2.TabIndex = 3;
             this.block2.TabStop = false;
@@ -276,10 +280,10 @@
             this.bad_guy.BackColor = System.Drawing.Color.Transparent;
             this.bad_guy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bad_guy.Image = ((System.Drawing.Image)(resources.GetObject("bad_guy.Image")));
-            this.bad_guy.Location = new System.Drawing.Point(490, 546);
+            this.bad_guy.Location = new System.Drawing.Point(401, 524);
             this.bad_guy.Name = "bad_guy";
-            this.bad_guy.Size = new System.Drawing.Size(81, 79);
-            this.bad_guy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.bad_guy.Size = new System.Drawing.Size(134, 94);
+            this.bad_guy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bad_guy.TabIndex = 0;
             this.bad_guy.TabStop = false;
             // 
@@ -287,6 +291,8 @@
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
             this.screen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.screen.Controls.Add(this.dragon2);
+            this.screen.Controls.Add(this.dragon1);
             this.screen.Controls.Add(this.label1);
             this.screen.Controls.Add(this.picBoxSound);
             this.screen.Controls.Add(this.btnLevel);
@@ -327,6 +333,32 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // dragon1
+            // 
+            this.dragon1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dragon1.BackColor = System.Drawing.Color.Transparent;
+            this.dragon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.dragon1.Image = ((System.Drawing.Image)(resources.GetObject("dragon1.Image")));
+            this.dragon1.Location = new System.Drawing.Point(254, 336);
+            this.dragon1.Name = "dragon1";
+            this.dragon1.Size = new System.Drawing.Size(96, 81);
+            this.dragon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dragon1.TabIndex = 21;
+            this.dragon1.TabStop = false;
+            // 
+            // dragon2
+            // 
+            this.dragon2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dragon2.BackColor = System.Drawing.Color.Transparent;
+            this.dragon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.dragon2.Image = ((System.Drawing.Image)(resources.GetObject("dragon2.Image")));
+            this.dragon2.Location = new System.Drawing.Point(885, 243);
+            this.dragon2.Name = "dragon2";
+            this.dragon2.Size = new System.Drawing.Size(55, 65);
+            this.dragon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dragon2.TabIndex = 22;
+            this.dragon2.TabStop = false;
+            // 
             // Lvl3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -356,6 +388,8 @@
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dragon1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dragon2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,5 +416,7 @@
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.PictureBox GameOver;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox dragon2;
+        private System.Windows.Forms.PictureBox dragon1;
     }
 }
