@@ -49,6 +49,7 @@
             this.block0 = new System.Windows.Forms.PictureBox();
             this.bad_guy = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
+            this.pirate = new System.Windows.Forms.PictureBox();
             this.GameOver = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
@@ -63,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.block0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bad_guy)).BeginInit();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pirate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
             this.SuspendLayout();
             // 
@@ -257,7 +259,7 @@
             this.block1.Image = ((System.Drawing.Image)(resources.GetObject("block1.Image")));
             this.block1.Location = new System.Drawing.Point(688, 503);
             this.block1.Name = "block1";
-            this.block1.Size = new System.Drawing.Size(150, 26);
+            this.block1.Size = new System.Drawing.Size(378, 26);
             this.block1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block1.TabIndex = 2;
             this.block1.TabStop = false;
@@ -268,7 +270,7 @@
             this.block0.BackColor = System.Drawing.Color.Transparent;
             this.block0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block0.Image = ((System.Drawing.Image)(resources.GetObject("block0.Image")));
-            this.block0.Location = new System.Drawing.Point(338, 624);
+            this.block0.Location = new System.Drawing.Point(338, 610);
             this.block0.Name = "block0";
             this.block0.Size = new System.Drawing.Size(500, 28);
             this.block0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,7 +285,7 @@
             this.bad_guy.Image = ((System.Drawing.Image)(resources.GetObject("bad_guy.Image")));
             this.bad_guy.Location = new System.Drawing.Point(490, 546);
             this.bad_guy.Name = "bad_guy";
-            this.bad_guy.Size = new System.Drawing.Size(81, 79);
+            this.bad_guy.Size = new System.Drawing.Size(58, 58);
             this.bad_guy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.bad_guy.TabIndex = 0;
             this.bad_guy.TabStop = false;
@@ -292,6 +294,7 @@
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
             this.screen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.screen.Controls.Add(this.pirate);
             this.screen.Controls.Add(this.label1);
             this.screen.Controls.Add(this.picBoxSound);
             this.screen.Controls.Add(this.btnLevel);
@@ -314,6 +317,19 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(1184, 851);
             this.screen.TabIndex = 17;
+            // 
+            // pirate
+            // 
+            this.pirate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pirate.BackColor = System.Drawing.Color.Transparent;
+            this.pirate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pirate.Image = ((System.Drawing.Image)(resources.GetObject("pirate.Image")));
+            this.pirate.Location = new System.Drawing.Point(775, 430);
+            this.pirate.Name = "pirate";
+            this.pirate.Size = new System.Drawing.Size(63, 67);
+            this.pirate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pirate.TabIndex = 21;
+            this.pirate.TabStop = false;
             // 
             // GameOver
             // 
@@ -353,6 +369,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bad_guy)).EndInit();
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pirate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
             this.ResumeLayout(false);
 
@@ -380,5 +397,6 @@
         private System.Windows.Forms.PictureBox bad_guy;
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.PictureBox GameOver;
+        private System.Windows.Forms.PictureBox pirate;
     }
 }

@@ -40,6 +40,7 @@ namespace Game.Levels
         bool check6 = false;
         bool check7 = true;
         bool check_guy1 = false;
+        bool check_pirate = false;
         bool isCatched = false;
         bool isWin = false;
         bool glitch = false;
@@ -86,7 +87,7 @@ namespace Game.Levels
             Random rnd = new Random();
 
             block0.Location = new Point(rnd.Next(100, this.Width - 100), 420);
-            bad_guy.Location = new Point(block0.Location.X / 2, block0.Location.Y - bad_guy.Height);
+            block1.Location = new Point(rnd.Next(100, this.Width - 100), 420);
 
             block1.Location = new Point(rnd.Next(100, this.Width - 100), 320);
             block2.Location = new Point(rnd.Next(100, this.Width - 100), 220);
@@ -109,6 +110,9 @@ namespace Game.Levels
 
             GameOver.Location = new Point(this.Width / 2 - (GameOver.Width / 2), this.Height / 2 - (GameOver.Height / 2));
             GameOver.BringToFront();
+
+            bad_guy.Location = new Point(block0.Location.X / 2, block0.Location.Y - bad_guy.Height);
+            pirate.Location = new Point(block1.Location.X / 2, block1.Location.Y - pirate.Height);
         }
       
         private void Timer1_Tick(object sender, EventArgs e)
@@ -129,7 +133,7 @@ namespace Game.Levels
                 GameOver.Visible = true;
                 player.Enabled = false;
                 bad_guy.Enabled = false;
-
+                pirate.Enabled = false;
             }
 
             if (isWin == true)
@@ -412,6 +416,7 @@ namespace Game.Levels
                 if (player.Bottom == block6.Top)
                 {
                     player.Left += (2 + platformSpeed1);
+               
                 }
             }
 
@@ -421,6 +426,7 @@ namespace Game.Levels
                 if (player.Bottom == block6.Top)
                 {
                     player.Left -= (2 + platformSpeed1);
+                   
                 }
             }
 
@@ -442,7 +448,7 @@ namespace Game.Levels
                 if (player.Bottom == block7.Top)
                 {
                     player.Left += 2;
-                    bad_guy.Left += 2;
+                   
                 }
             }
             else
@@ -451,7 +457,7 @@ namespace Game.Levels
                 if (player.Bottom == block7.Top)
                 {
                     player.Left -= 2;
-                    bad_guy.Left -= 2;
+                   
                 }
             }
 
@@ -460,13 +466,13 @@ namespace Game.Levels
             {
                 bad_guy.Left = block0.Right - bad_guy.Width;
                 check_guy1 = false;
-                bad_guy.Image = Image.FromFile("bigbadleft.gif");
+                bad_guy.Image = Image.FromFile("pirateLeft.gif");
             }
             if (bad_guy.Left < block0.Left)
             {
                 bad_guy.Left = block0.Left;
                 check_guy1 = true;
-                bad_guy.Image = Image.FromFile("bigbadright.gif");
+                bad_guy.Image = Image.FromFile("pirateRight.gif");
             }
 
             if (check_guy1 == true) { bad_guy.Left += 4; }
@@ -484,6 +490,38 @@ namespace Game.Levels
 
                 isCatched = true;
             }
+
+
+            //pirate movement and wall collision
+            if (pirate.Right > block1.Right)
+            {
+                pirate.Left = block1.Right - pirate.Width;
+                check_pirate = false;
+                pirate.Image = Image.FromFile("pirateBeardLeft.gif");
+            }
+            if (pirate.Left < block1.Left)
+            {
+                pirate.Left = block1.Left;
+                check_pirate = true;
+                pirate.Image = Image.FromFile("pirateBeardRight.gif");
+            }
+
+            if (check_pirate == true) { pirate.Left += 4; }
+
+            else { pirate.Left -= 4; }
+
+            //collision with pirate (game over)
+            if (player.Right > pirate.Left && player.Left < pirate.Right - player.Width && player.Bottom < pirate.Bottom && player.Bottom > pirate.Top)
+            {
+                isCatched = true;
+            }
+
+            if (player.Left < pirate.Right && player.Right > pirate.Left + player.Width && player.Bottom < pirate.Bottom && player.Bottom > pirate.Top)
+            {
+
+                isCatched = true;
+            }
+
 
             //collision with star (win)
             if (player.Right > Star.Left && player.Left < Star.Right - player.Width && player.Bottom < Star.Bottom && player.Bottom > Star.Top)
