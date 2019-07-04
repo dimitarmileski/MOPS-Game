@@ -320,8 +320,8 @@
             this.GameOver.Image = ((System.Drawing.Image)(resources.GetObject("GameOver.Image")));
             this.GameOver.Location = new System.Drawing.Point(0, 0);
             this.GameOver.Name = "GameOver";
-            this.GameOver.Size = new System.Drawing.Size(1200, 851);
-            this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GameOver.Size = new System.Drawing.Size(1200, 700);
+            this.GameOver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.GameOver.TabIndex = 9;
             this.GameOver.TabStop = false;
             this.GameOver.Visible = false;

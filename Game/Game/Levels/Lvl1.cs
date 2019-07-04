@@ -139,6 +139,7 @@ namespace Game.Levels
                 win.Play();
                 //Win Animation 
                 GameOver.Image = Image.FromFile("lvl1Win.gif");
+                GameOver.Location = new Point(this.Width / 2 - (GameOver.Width / 2), this.Height / 2 - (GameOver.Height / 2));
                 GameOver.Visible = true;
                 //
                 System.Threading.Thread.Sleep(900);
