@@ -18,7 +18,7 @@ namespace Game
             Application.SetCompatibleTextRenderingDefault(false);
 
             //GameSound
-            GameSound.isSoundOn = false;
+            GameSound.isSoundOn = true;
 
             //
 

@@ -137,6 +137,10 @@ namespace Game.Levels
             {
                 backgroundSound.Stop();
                 win.Play();
+                //Win Animation 
+                GameOver.Image = Image.FromFile("lvl1Win.gif");
+                GameOver.Visible = true;
+                //
                 System.Threading.Thread.Sleep(900);
                 player.Top = screen.Height - player.Height;
                 points++;
@@ -145,6 +149,7 @@ namespace Game.Levels
                 if (points < 12) { platformSpeed2++; }
                 isWin = false;
                 backgroundSound.Play();
+
 
                 LevelsState.levelPassed[level] = true;
 
