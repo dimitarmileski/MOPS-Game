@@ -435,8 +435,8 @@ private void Lvl1_KeyDown(object sender, KeyEventArgs e)
 
 ### Сериализација
 
-Состојбата на играта е всуштност колку левели се поминати.За таа цел е имплементиратна класата LevelsState.cs во која се чува низа од bool за тоа дали левелот е комплетиран или не. Ваквата состојба на класата се зачувува со помош на функциите saveFile().
-
+Состојбата на играта е всуштност колку нивоа се поминати. За таа цел е имплементира класата LevelsState.cs во која се чува низа од bool за тоа дали нивото е комплетирано или не. Ваквата состојба на класата се зачувува со помош на функцијата
+[saveFile()](https://github.com/dimitarmileski/MOPS-Game/blob/58cddcb24be242a668478621729efa2f5bd8affa/Game/Game/LevelsForm.cs#L313) . А претходно зачувана состојба се отвара со помош на [openFile()](https://github.com/dimitarmileski/MOPS-Game/blob/58cddcb24be242a668478621729efa2f5bd8affa/Game/Game/LevelsForm.cs#L335) . 
 
 ```csharp
 
