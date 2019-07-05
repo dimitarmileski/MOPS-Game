@@ -70,8 +70,7 @@ namespace Game.Levels
             win.SoundLocation = "GettingTheStar.wav";
             gameOver.SoundLocation = "GameOver.wav";
             backgroundSound.PlayLooping();
-            score.Text = "Score : " + points;
-            score.ForeColor = Color.Black;
+           
             this.DoubleBuffered = true;
 
             initPositions();
@@ -148,7 +147,7 @@ namespace Game.Levels
                 System.Threading.Thread.Sleep(900);
                 player.Top = screen.Height - player.Height;
                 points++;
-                score.Text = "Score = " + points;
+               
                 if (platformSpeed1 < 6) { platformSpeed1++; }
                 if (points < 12) { platformSpeed2++; }
                 isWin = false;

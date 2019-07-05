@@ -41,7 +41,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.player = new System.Windows.Forms.PictureBox();
             this.controls = new System.Windows.Forms.TextBox();
-            this.score = new System.Windows.Forms.TextBox();
             this.block4 = new System.Windows.Forms.PictureBox();
             this.block3 = new System.Windows.Forms.PictureBox();
             this.block2 = new System.Windows.Forms.PictureBox();
@@ -86,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(3, 89);
+            this.label1.Location = new System.Drawing.Point(3, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 20;
@@ -200,18 +199,6 @@
             this.controls.TabIndex = 10;
             this.controls.Text = "Move = left/right  Jump = space  Restart = enter  Exit = esc";
             // 
-            // score
-            // 
-            this.score.BackColor = System.Drawing.Color.Gainsboro;
-            this.score.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.score.Enabled = false;
-            this.score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.score.ForeColor = System.Drawing.Color.Black;
-            this.score.Location = new System.Drawing.Point(0, 56);
-            this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(140, 30);
-            this.score.TabIndex = 6;
-            // 
             // block4
             // 
             this.block4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -304,7 +291,6 @@
             this.screen.Controls.Add(this.Star);
             this.screen.Controls.Add(this.player);
             this.screen.Controls.Add(this.controls);
-            this.screen.Controls.Add(this.score);
             this.screen.Controls.Add(this.block4);
             this.screen.Controls.Add(this.block3);
             this.screen.Controls.Add(this.block2);
@@ -388,7 +374,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.TextBox controls;
-        private System.Windows.Forms.TextBox score;
         private System.Windows.Forms.PictureBox block4;
         private System.Windows.Forms.PictureBox block3;
         private System.Windows.Forms.PictureBox block2;

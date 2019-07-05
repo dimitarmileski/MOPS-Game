@@ -41,7 +41,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.player = new System.Windows.Forms.PictureBox();
             this.controls = new System.Windows.Forms.TextBox();
-            this.score = new System.Windows.Forms.TextBox();
             this.block4 = new System.Windows.Forms.PictureBox();
             this.block3 = new System.Windows.Forms.PictureBox();
             this.block2 = new System.Windows.Forms.PictureBox();
@@ -49,11 +48,11 @@
             this.block0 = new System.Windows.Forms.PictureBox();
             this.enmy1 = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
+            this.enmy5 = new System.Windows.Forms.PictureBox();
             this.enmy4 = new System.Windows.Forms.PictureBox();
             this.enmy3 = new System.Windows.Forms.PictureBox();
             this.enmy2 = new System.Windows.Forms.PictureBox();
             this.GameOver = new System.Windows.Forms.PictureBox();
-            this.enmy5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block6)).BeginInit();
@@ -67,11 +66,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.block0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enmy1)).BeginInit();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enmy4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enmy3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enmy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enmy5)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLevels
@@ -92,7 +91,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(3, 89);
+            this.label1.Location = new System.Drawing.Point(3, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 20;
@@ -206,18 +205,6 @@
             this.controls.TabIndex = 10;
             this.controls.Text = "Move = left/right  Jump = space  Restart = enter  Exit = esc";
             // 
-            // score
-            // 
-            this.score.BackColor = System.Drawing.Color.Gainsboro;
-            this.score.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.score.Enabled = false;
-            this.score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.score.ForeColor = System.Drawing.Color.Black;
-            this.score.Location = new System.Drawing.Point(0, 56);
-            this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(140, 30);
-            this.score.TabIndex = 6;
-            // 
             // block4
             // 
             this.block4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -313,7 +300,6 @@
             this.screen.Controls.Add(this.Star);
             this.screen.Controls.Add(this.player);
             this.screen.Controls.Add(this.controls);
-            this.screen.Controls.Add(this.score);
             this.screen.Controls.Add(this.block4);
             this.screen.Controls.Add(this.block3);
             this.screen.Controls.Add(this.block2);
@@ -326,6 +312,19 @@
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(1184, 851);
             this.screen.TabIndex = 22;
+            // 
+            // enmy5
+            // 
+            this.enmy5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enmy5.BackColor = System.Drawing.Color.Transparent;
+            this.enmy5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enmy5.Image = ((System.Drawing.Image)(resources.GetObject("enmy5.Image")));
+            this.enmy5.Location = new System.Drawing.Point(473, 741);
+            this.enmy5.Name = "enmy5";
+            this.enmy5.Size = new System.Drawing.Size(42, 45);
+            this.enmy5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enmy5.TabIndex = 24;
+            this.enmy5.TabStop = false;
             // 
             // enmy4
             // 
@@ -377,19 +376,6 @@
             this.GameOver.TabStop = false;
             this.GameOver.Visible = false;
             // 
-            // enmy5
-            // 
-            this.enmy5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.enmy5.BackColor = System.Drawing.Color.Transparent;
-            this.enmy5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.enmy5.Image = ((System.Drawing.Image)(resources.GetObject("enmy5.Image")));
-            this.enmy5.Location = new System.Drawing.Point(473, 741);
-            this.enmy5.Name = "enmy5";
-            this.enmy5.Size = new System.Drawing.Size(42, 45);
-            this.enmy5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.enmy5.TabIndex = 24;
-            this.enmy5.TabStop = false;
-            // 
             // Lvl6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -417,11 +403,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.enmy1)).EndInit();
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enmy4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enmy3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enmy2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enmy5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -439,7 +425,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.TextBox controls;
-        private System.Windows.Forms.TextBox score;
         private System.Windows.Forms.PictureBox block4;
         private System.Windows.Forms.PictureBox block3;
         private System.Windows.Forms.PictureBox block2;
