@@ -432,3 +432,27 @@ private void Lvl1_KeyDown(object sender, KeyEventArgs e)
         }
 
 ```
+
+### Сериализација
+
+Состојбата на играта е всуштност колку левели се поминати.За таа цел е имплементиратна класата LevelsState.cs во која се чува низа од bool за тоа дали левелот е комплетиран или не. Ваквата состојба на класата се зачувува со помош на функциите saveFile().
+
+
+```csharp
+
+
+    [Serializable]
+    public class LevelsState
+    {
+        public static bool [] levelPassed  = new bool[15];
+
+        public static bool isLevelPassed(int i)
+        {
+            return levelPassed[i];
+        }
+
+    }
+}
+
+
+```
