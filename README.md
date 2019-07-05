@@ -1,5 +1,4 @@
 # MOPS Game
-
 ## Проект по предметот Визуелно Програмирање
  
 ###### Факултет за Информатички Науки и Компјутерско Инженерство - Скопје
@@ -38,3 +37,43 @@
 
 ##### Поставки 
 Во делот за поставки се наоѓа копче за вклучување/исклучување на музиката на ниво на менија.
+
+
+### Имплементација
+
+#### Menu Form
+Секоја ставка во менито се отвара во нова форма, како нишка а старата форма се затвора.
+
+#### Levels Form
+#### Options Form
+#### About Form
+#### Level Form
+
+
+ ```csharp
+    private Thread th;
+
+     public void openNewForm() {
+            this.Close();
+            th = new Thread(openNewWinForm);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+       void openNewWinForm(object obj)
+        {
+            if (menuItemSelected == MenuItemSelected.Levels)
+            {
+                Application.Run(new LevelsForm());
+            }
+            else if (menuItemSelected == MenuItemSelected.Options) {
+                Application.Run(new OptionsForm());
+            }
+            else if(menuItemSelected == MenuItemSelected.About)
+            {
+                Application.Run(new AboutForm());
+            }
+
+        }
+
+    ```
