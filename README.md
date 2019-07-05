@@ -42,7 +42,7 @@
 ### Имплементација
 
 #### Menu Form
-Секоја ставка во менито се отвара во нова форма, како нишка а старата форма се затвора.
+Секоја ставка во менито се отвара во нова форма, како нишка а старата форма се затвора. Каде што MenuItemSelected е енумерација.
 
 
  ```csharp
@@ -128,7 +128,113 @@ lvlPnl.Size = new Size(this.Width, this.Height / 2);
 
 ```
 
+Double buffering 
+
+```csharp
+
+ protected override CreateParams CreateParams // this activates DB and removes flickering and tearing!
+        {
+            get
+            {
+                // Activate double buffering at the form level.  All child controls will be double buffered as well.
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED
+                return cp;
+            }
+        }
+```
+
 #### Options Form
-#### About Form
+
+Вклучување и исклучување на музиката.
+OptionsForm.cs
+
+```csharp
+
+if (!chkSound.Checked) {
+                GameSound.stopGameTheme();
+               
+            }
+            else
+            {
+                GameSound.playGameTheme();
+                
+            }
+
+```
+
+
+```csharp
+
+GameSound.cs
+
+    public static class GameSound
+    {
+        public static System.Media.SoundPlayer backgroundSound = new System.Media.SoundPlayer();
+        public static System.Media.SoundPlayer win = new System.Media.SoundPlayer();
+        public static System.Media.SoundPlayer gameOver = new System.Media.SoundPlayer();
+
+        public static bool isSoundOn;
+
+        public static void playGameTheme()
+        {
+            backgroundSound.SoundLocation = "GameThemeSong.wav";
+            win.SoundLocation = "GettingTheStar.wav";
+            gameOver.SoundLocation = "GameOver.wav";
+
+            backgroundSound.PlayLooping();
+        }
+
+        public static void stopGameTheme() {
+            backgroundSound.Stop();
+        }
+
+    
+```
+
 #### Level Form
+
+Музика на секој од нивоата се имплементира со помош на System.Media.SoundPlayer() класата. 
+
+
+```csharp
+
+System.Media.SoundPlayer backgroundSound = new System.Media.SoundPlayer();
+        System.Media.SoundPlayer win = new System.Media.SoundPlayer();
+        System.Media.SoundPlayer gameOver = new System.Media.SoundPlayer();
+
+//...
+
+```
+
+Победа 
+
+```csharp
+
+ if (isWin == true)
+            {
+ backgroundSound.Stop();
+ win.Play();
+ System.Threading.Thread.Sleep(900);
+
+isWin = false;
+backgroundSound.Play();
+
+}
+
+```
+
+При победа се запира позадинската музика, се пушта позадинската музика. По 900 милисекунди повторно се пушта позадинската музика.
+
+Пораз
+
+```csharp
+
+if (isCatched == true) //game over (when in contact with badGuy
+            {               
+                backgroundSound.Stop();
+                gameOver.Play();
+
+            }
+```
 
