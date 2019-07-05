@@ -45,9 +45,13 @@
             this.block2 = new System.Windows.Forms.PictureBox();
             this.block1 = new System.Windows.Forms.PictureBox();
             this.block0 = new System.Windows.Forms.PictureBox();
-            this.bad_guy = new System.Windows.Forms.PictureBox();
+            this.enmy1 = new System.Windows.Forms.PictureBox();
             this.GameOver = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
+            this.enmy5 = new System.Windows.Forms.PictureBox();
+            this.enmy4 = new System.Windows.Forms.PictureBox();
+            this.enmy2 = new System.Windows.Forms.PictureBox();
+            this.enmy3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
@@ -60,9 +64,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.block2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bad_guy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
             this.screen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLevels
@@ -135,7 +143,7 @@
             this.block6.Image = ((System.Drawing.Image)(resources.GetObject("block6.Image")));
             this.block6.Location = new System.Drawing.Point(338, 781);
             this.block6.Name = "block6";
-            this.block6.Size = new System.Drawing.Size(410, 18);
+            this.block6.Size = new System.Drawing.Size(749, 18);
             this.block6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block6.TabIndex = 13;
             this.block6.TabStop = false;
@@ -148,7 +156,7 @@
             this.block5.Image = ((System.Drawing.Image)(resources.GetObject("block5.Image")));
             this.block5.Location = new System.Drawing.Point(338, 705);
             this.block5.Name = "block5";
-            this.block5.Size = new System.Drawing.Size(410, 18);
+            this.block5.Size = new System.Drawing.Size(553, 18);
             this.block5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block5.TabIndex = 12;
             this.block5.TabStop = false;
@@ -197,9 +205,9 @@
             this.block4.BackColor = System.Drawing.Color.Transparent;
             this.block4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block4.Image = ((System.Drawing.Image)(resources.GetObject("block4.Image")));
-            this.block4.Location = new System.Drawing.Point(588, 214);
+            this.block4.Location = new System.Drawing.Point(411, 214);
             this.block4.Name = "block4";
-            this.block4.Size = new System.Drawing.Size(75, 15);
+            this.block4.Size = new System.Drawing.Size(542, 15);
             this.block4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block4.TabIndex = 5;
             this.block4.TabStop = false;
@@ -210,9 +218,9 @@
             this.block3.BackColor = System.Drawing.Color.Transparent;
             this.block3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block3.Image = ((System.Drawing.Image)(resources.GetObject("block3.Image")));
-            this.block3.Location = new System.Drawing.Point(838, 314);
+            this.block3.Location = new System.Drawing.Point(618, 314);
             this.block3.Name = "block3";
-            this.block3.Size = new System.Drawing.Size(100, 19);
+            this.block3.Size = new System.Drawing.Size(500, 19);
             this.block3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block3.TabIndex = 4;
             this.block3.TabStop = false;
@@ -223,9 +231,9 @@
             this.block2.BackColor = System.Drawing.Color.Transparent;
             this.block2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block2.Image = ((System.Drawing.Image)(resources.GetObject("block2.Image")));
-            this.block2.Location = new System.Drawing.Point(238, 414);
+            this.block2.Location = new System.Drawing.Point(101, 414);
             this.block2.Name = "block2";
-            this.block2.Size = new System.Drawing.Size(125, 15);
+            this.block2.Size = new System.Drawing.Size(535, 15);
             this.block2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block2.TabIndex = 3;
             this.block2.TabStop = false;
@@ -236,9 +244,9 @@
             this.block1.BackColor = System.Drawing.Color.Transparent;
             this.block1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.block1.Image = ((System.Drawing.Image)(resources.GetObject("block1.Image")));
-            this.block1.Location = new System.Drawing.Point(688, 514);
+            this.block1.Location = new System.Drawing.Point(393, 514);
             this.block1.Name = "block1";
-            this.block1.Size = new System.Drawing.Size(150, 15);
+            this.block1.Size = new System.Drawing.Size(602, 15);
             this.block1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block1.TabIndex = 2;
             this.block1.TabStop = false;
@@ -251,23 +259,23 @@
             this.block0.Image = ((System.Drawing.Image)(resources.GetObject("block0.Image")));
             this.block0.Location = new System.Drawing.Point(338, 624);
             this.block0.Name = "block0";
-            this.block0.Size = new System.Drawing.Size(451, 15);
+            this.block0.Size = new System.Drawing.Size(581, 15);
             this.block0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block0.TabIndex = 1;
             this.block0.TabStop = false;
             // 
-            // bad_guy
+            // enmy1
             // 
-            this.bad_guy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bad_guy.BackColor = System.Drawing.Color.Transparent;
-            this.bad_guy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bad_guy.Image = ((System.Drawing.Image)(resources.GetObject("bad_guy.Image")));
-            this.bad_guy.Location = new System.Drawing.Point(490, 546);
-            this.bad_guy.Name = "bad_guy";
-            this.bad_guy.Size = new System.Drawing.Size(81, 79);
-            this.bad_guy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.bad_guy.TabIndex = 0;
-            this.bad_guy.TabStop = false;
+            this.enmy1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enmy1.BackColor = System.Drawing.Color.Transparent;
+            this.enmy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enmy1.Image = ((System.Drawing.Image)(resources.GetObject("enmy1.Image")));
+            this.enmy1.Location = new System.Drawing.Point(507, 568);
+            this.enmy1.Name = "enmy1";
+            this.enmy1.Size = new System.Drawing.Size(64, 57);
+            this.enmy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enmy1.TabIndex = 0;
+            this.enmy1.TabStop = false;
             // 
             // GameOver
             // 
@@ -284,6 +292,10 @@
             // 
             this.screen.BackColor = System.Drawing.Color.Transparent;
             this.screen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.screen.Controls.Add(this.enmy5);
+            this.screen.Controls.Add(this.enmy4);
+            this.screen.Controls.Add(this.enmy2);
+            this.screen.Controls.Add(this.enmy3);
             this.screen.Controls.Add(this.label1);
             this.screen.Controls.Add(this.picBoxSound);
             this.screen.Controls.Add(this.btnLevel);
@@ -298,13 +310,65 @@
             this.screen.Controls.Add(this.block2);
             this.screen.Controls.Add(this.block1);
             this.screen.Controls.Add(this.block0);
-            this.screen.Controls.Add(this.bad_guy);
+            this.screen.Controls.Add(this.enmy1);
             this.screen.Controls.Add(this.GameOver);
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.Location = new System.Drawing.Point(0, 0);
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(1184, 851);
             this.screen.TabIndex = 31;
+            // 
+            // enmy5
+            // 
+            this.enmy5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enmy5.BackColor = System.Drawing.Color.Transparent;
+            this.enmy5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enmy5.Image = ((System.Drawing.Image)(resources.GetObject("enmy5.Image")));
+            this.enmy5.Location = new System.Drawing.Point(618, 161);
+            this.enmy5.Name = "enmy5";
+            this.enmy5.Size = new System.Drawing.Size(51, 47);
+            this.enmy5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enmy5.TabIndex = 24;
+            this.enmy5.TabStop = false;
+            // 
+            // enmy4
+            // 
+            this.enmy4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enmy4.BackColor = System.Drawing.Color.Transparent;
+            this.enmy4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enmy4.Image = ((System.Drawing.Image)(resources.GetObject("enmy4.Image")));
+            this.enmy4.Location = new System.Drawing.Point(870, 258);
+            this.enmy4.Name = "enmy4";
+            this.enmy4.Size = new System.Drawing.Size(49, 50);
+            this.enmy4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enmy4.TabIndex = 23;
+            this.enmy4.TabStop = false;
+            // 
+            // enmy2
+            // 
+            this.enmy2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enmy2.BackColor = System.Drawing.Color.Transparent;
+            this.enmy2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enmy2.Image = ((System.Drawing.Image)(resources.GetObject("enmy2.Image")));
+            this.enmy2.Location = new System.Drawing.Point(792, 455);
+            this.enmy2.Name = "enmy2";
+            this.enmy2.Size = new System.Drawing.Size(46, 53);
+            this.enmy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enmy2.TabIndex = 22;
+            this.enmy2.TabStop = false;
+            // 
+            // enmy3
+            // 
+            this.enmy3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enmy3.BackColor = System.Drawing.Color.Transparent;
+            this.enmy3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enmy3.Image = ((System.Drawing.Image)(resources.GetObject("enmy3.Image")));
+            this.enmy3.Location = new System.Drawing.Point(328, 355);
+            this.enmy3.Name = "enmy3";
+            this.enmy3.Size = new System.Drawing.Size(51, 53);
+            this.enmy3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enmy3.TabIndex = 21;
+            this.enmy3.TabStop = false;
             // 
             // timer1
             // 
@@ -336,10 +400,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.block2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.block0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bad_guy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,9 +429,13 @@
         private System.Windows.Forms.PictureBox block2;
         private System.Windows.Forms.PictureBox block1;
         private System.Windows.Forms.PictureBox block0;
-        private System.Windows.Forms.PictureBox bad_guy;
+        private System.Windows.Forms.PictureBox enmy1;
         private System.Windows.Forms.PictureBox GameOver;
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox enmy5;
+        private System.Windows.Forms.PictureBox enmy4;
+        private System.Windows.Forms.PictureBox enmy2;
+        private System.Windows.Forms.PictureBox enmy3;
     }
 }
