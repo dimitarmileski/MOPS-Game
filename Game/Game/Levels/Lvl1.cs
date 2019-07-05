@@ -86,14 +86,13 @@ namespace Game.Levels
             block0.Location = new Point(rnd.Next(100, this.Width - 100), 420);
             bad_guy.Location = new Point(block0.Location.X /2, block0.Location.Y - bad_guy.Height);
 
-            block1.Location = new Point(rnd.Next(100, this.Width-100), 320);
+            block1.Location = new Point(rnd.Next(100, this.Width - 100), 320);
             block2.Location = new Point(rnd.Next(100, this.Width - 100), 220);
             block3.Location = new Point(rnd.Next(100, this.Width - 100), 120);
             block4.Location = new Point(rnd.Next(100, this.Width - 100), 20);
             block5.Location = new Point(rnd.Next(100, this.Width - 100), 520);
             block6.Location = new Point(rnd.Next(100, this.Width - 100), 620);
             block7.Location = new Point(rnd.Next(100, this.Width - 100), 720);
-
 
             player.Location = new Point(rnd.Next(100, this.Width - 100), this.Height - player.Height);
         }

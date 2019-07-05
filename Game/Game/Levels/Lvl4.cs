@@ -363,6 +363,7 @@ namespace Game.Levels
                 if (player.Bottom == block4.Top)
                 {
                     player.Left += (5 + platformSpeed2);
+                   
                 }
             }
 
@@ -577,7 +578,7 @@ namespace Game.Levels
                 enmy4.Image = Image.FromFile("blueDinoRight.gif");
             }
 
-            if (check_enemy4 == true) { enmy4.Left += 4; }
+            if (check_enemy4 == false) { enmy4.Left += 4; }
 
             else { enmy4.Left -= 4; }
 
