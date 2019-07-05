@@ -255,7 +255,7 @@ namespace Game
         private void picBoxLvl6_Click(object sender, EventArgs e)
         {
             levelSelected = "6";
-            if (LevelsState.levelPassed[4])
+           if (LevelsState.levelPassed[4])
                 openLevelForm();
         }
 

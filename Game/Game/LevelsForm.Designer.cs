@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LevelsForm));
-            this.picBoxLvl1 = new System.Windows.Forms.PictureBox();
-            this.picBoxLvl2 = new System.Windows.Forms.PictureBox();
             this.picBoxLvl3 = new System.Windows.Forms.PictureBox();
             this.picBoxLvl4 = new System.Windows.Forms.PictureBox();
             this.picBoxLvl5 = new System.Windows.Forms.PictureBox();
@@ -46,6 +44,7 @@
             this.picBoxLvl15 = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.Button();
             this.lvlPnl = new System.Windows.Forms.Panel();
+            this.picBoxLvl1 = new System.Windows.Forms.PictureBox();
             this.lblHelp = new System.Windows.Forms.Label();
             this.lblGreen = new System.Windows.Forms.Label();
             this.lblYellow = new System.Windows.Forms.Label();
@@ -58,8 +57,7 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl2)).BeginInit();
+            this.picBoxLvl2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl5)).BeginInit();
@@ -74,38 +72,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl15)).BeginInit();
             this.lvlPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDog)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picBoxLvl1
-            // 
-            this.picBoxLvl1.BackColor = System.Drawing.Color.Goldenrod;
-            this.picBoxLvl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl1.BackgroundImage")));
-            this.picBoxLvl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBoxLvl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picBoxLvl1.Location = new System.Drawing.Point(0, 0);
-            this.picBoxLvl1.Margin = new System.Windows.Forms.Padding(0);
-            this.picBoxLvl1.Name = "picBoxLvl1";
-            this.picBoxLvl1.Size = new System.Drawing.Size(176, 484);
-            this.picBoxLvl1.TabIndex = 1;
-            this.picBoxLvl1.TabStop = false;
-            this.picBoxLvl1.Click += new System.EventHandler(this.picBoxLvl1_Click);
-            // 
-            // picBoxLvl2
-            // 
-            this.picBoxLvl2.BackColor = System.Drawing.Color.Goldenrod;
-            this.picBoxLvl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picBoxLvl2.Location = new System.Drawing.Point(176, 0);
-            this.picBoxLvl2.Name = "picBoxLvl2";
-            this.picBoxLvl2.Size = new System.Drawing.Size(110, 484);
-            this.picBoxLvl2.TabIndex = 2;
-            this.picBoxLvl2.TabStop = false;
-            this.picBoxLvl2.Click += new System.EventHandler(this.picBoxLvl2_Click);
             // 
             // picBoxLvl3
             // 
             this.picBoxLvl3.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl3.BackgroundImage")));
+            this.picBoxLvl3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxLvl3.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl3.Location = new System.Drawing.Point(286, 0);
             this.picBoxLvl3.Name = "picBoxLvl3";
@@ -117,6 +94,8 @@
             // picBoxLvl4
             // 
             this.picBoxLvl4.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl4.BackgroundImage")));
+            this.picBoxLvl4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl4.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl4.Location = new System.Drawing.Point(396, 0);
             this.picBoxLvl4.Name = "picBoxLvl4";
@@ -128,6 +107,8 @@
             // picBoxLvl5
             // 
             this.picBoxLvl5.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl5.BackgroundImage")));
+            this.picBoxLvl5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl5.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl5.Location = new System.Drawing.Point(506, 0);
             this.picBoxLvl5.Name = "picBoxLvl5";
@@ -139,6 +120,8 @@
             // picBoxLvl6
             // 
             this.picBoxLvl6.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl6.BackgroundImage")));
+            this.picBoxLvl6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl6.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl6.Location = new System.Drawing.Point(616, 0);
             this.picBoxLvl6.Name = "picBoxLvl6";
@@ -150,6 +133,8 @@
             // picBoxLvl7
             // 
             this.picBoxLvl7.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl7.BackgroundImage")));
+            this.picBoxLvl7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl7.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl7.Location = new System.Drawing.Point(726, 0);
             this.picBoxLvl7.Name = "picBoxLvl7";
@@ -161,6 +146,8 @@
             // picBoxLvl8
             // 
             this.picBoxLvl8.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl8.BackgroundImage")));
+            this.picBoxLvl8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl8.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl8.Location = new System.Drawing.Point(836, 0);
             this.picBoxLvl8.Name = "picBoxLvl8";
@@ -172,6 +159,8 @@
             // picBoxLvl9
             // 
             this.picBoxLvl9.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl9.BackgroundImage")));
+            this.picBoxLvl9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl9.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl9.Location = new System.Drawing.Point(946, 0);
             this.picBoxLvl9.Name = "picBoxLvl9";
@@ -183,6 +172,8 @@
             // picBoxLvl10
             // 
             this.picBoxLvl10.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl10.BackgroundImage")));
+            this.picBoxLvl10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl10.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl10.Location = new System.Drawing.Point(1056, 0);
             this.picBoxLvl10.Name = "picBoxLvl10";
@@ -194,6 +185,8 @@
             // picBoxLvl11
             // 
             this.picBoxLvl11.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl11.BackgroundImage")));
+            this.picBoxLvl11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl11.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl11.Location = new System.Drawing.Point(1166, 0);
             this.picBoxLvl11.Name = "picBoxLvl11";
@@ -205,6 +198,8 @@
             // picBoxLvl12
             // 
             this.picBoxLvl12.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl12.BackgroundImage")));
+            this.picBoxLvl12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl12.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl12.Location = new System.Drawing.Point(1276, 0);
             this.picBoxLvl12.Name = "picBoxLvl12";
@@ -216,6 +211,8 @@
             // picBoxLvl13
             // 
             this.picBoxLvl13.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl13.BackgroundImage")));
+            this.picBoxLvl13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl13.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl13.Location = new System.Drawing.Point(1386, 0);
             this.picBoxLvl13.Name = "picBoxLvl13";
@@ -227,6 +224,8 @@
             // picBoxLvl14
             // 
             this.picBoxLvl14.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl14.BackgroundImage")));
+            this.picBoxLvl14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxLvl14.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl14.Location = new System.Drawing.Point(1496, 0);
             this.picBoxLvl14.Name = "picBoxLvl14";
@@ -238,7 +237,8 @@
             // picBoxLvl15
             // 
             this.picBoxLvl15.BackColor = System.Drawing.Color.Goldenrod;
-            this.picBoxLvl15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picBoxLvl15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl15.BackgroundImage")));
+            this.picBoxLvl15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxLvl15.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBoxLvl15.Location = new System.Drawing.Point(1606, 0);
             this.picBoxLvl15.Name = "picBoxLvl15";
@@ -284,6 +284,20 @@
             this.lvlPnl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lvlPnl.Size = new System.Drawing.Size(1718, 486);
             this.lvlPnl.TabIndex = 31;
+            // 
+            // picBoxLvl1
+            // 
+            this.picBoxLvl1.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl1.BackgroundImage")));
+            this.picBoxLvl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxLvl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBoxLvl1.Location = new System.Drawing.Point(0, 0);
+            this.picBoxLvl1.Margin = new System.Windows.Forms.Padding(0);
+            this.picBoxLvl1.Name = "picBoxLvl1";
+            this.picBoxLvl1.Size = new System.Drawing.Size(176, 484);
+            this.picBoxLvl1.TabIndex = 1;
+            this.picBoxLvl1.TabStop = false;
+            this.picBoxLvl1.Click += new System.EventHandler(this.picBoxLvl1_Click);
             // 
             // lblHelp
             // 
@@ -413,6 +427,19 @@
             this.saveAsToolStripMenuItem.Text = "Save &As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click_1);
             // 
+            // picBoxLvl2
+            // 
+            this.picBoxLvl2.BackColor = System.Drawing.Color.Goldenrod;
+            this.picBoxLvl2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxLvl2.BackgroundImage")));
+            this.picBoxLvl2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxLvl2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picBoxLvl2.Location = new System.Drawing.Point(176, 0);
+            this.picBoxLvl2.Name = "picBoxLvl2";
+            this.picBoxLvl2.Size = new System.Drawing.Size(110, 484);
+            this.picBoxLvl2.TabIndex = 2;
+            this.picBoxLvl2.TabStop = false;
+            this.picBoxLvl2.Click += new System.EventHandler(this.picBoxLvl2_Click);
+            // 
             // LevelsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -432,8 +459,6 @@
             this.Name = "LevelsForm";
             this.Text = "LevelsForm";
             this.Load += new System.EventHandler(this.LevelsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl5)).EndInit();
@@ -448,17 +473,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl15)).EndInit();
             this.lvlPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDog)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxLvl2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox picBoxLvl1;
-        private System.Windows.Forms.PictureBox picBoxLvl2;
         private System.Windows.Forms.PictureBox picBoxLvl3;
         private System.Windows.Forms.PictureBox picBoxLvl4;
         private System.Windows.Forms.PictureBox picBoxLvl5;
@@ -471,7 +496,6 @@
         private System.Windows.Forms.PictureBox picBoxLvl12;
         private System.Windows.Forms.PictureBox picBoxLvl13;
         private System.Windows.Forms.PictureBox picBoxLvl14;
-        private System.Windows.Forms.PictureBox picBoxLvl15;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Panel lvlPnl;
         private System.Windows.Forms.Label lblHelp;
@@ -486,5 +510,8 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.PictureBox picBoxLvl1;
+        private System.Windows.Forms.PictureBox picBoxLvl2;
+        private System.Windows.Forms.PictureBox picBoxLvl15;
     }
 }
