@@ -48,12 +48,11 @@
             this.enmy2 = new System.Windows.Forms.PictureBox();
             this.GameOver = new System.Windows.Forms.PictureBox();
             this.screen = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.enmy3 = new System.Windows.Forms.PictureBox();
-            this.enmy4 = new System.Windows.Forms.PictureBox();
-            this.enmy5 = new System.Windows.Forms.PictureBox();
-            this.enmy6 = new System.Windows.Forms.PictureBox();
             this.enmy1 = new System.Windows.Forms.PictureBox();
+            this.enmy5 = new System.Windows.Forms.PictureBox();
+            this.enmy4 = new System.Windows.Forms.PictureBox();
+            this.enmy3 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxSound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block6)).BeginInit();
@@ -68,11 +67,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.enmy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).BeginInit();
             this.screen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.enmy3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enmy4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enmy5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enmy6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enmy1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLevels
@@ -209,7 +207,7 @@
             this.block4.Image = ((System.Drawing.Image)(resources.GetObject("block4.Image")));
             this.block4.Location = new System.Drawing.Point(588, 214);
             this.block4.Name = "block4";
-            this.block4.Size = new System.Drawing.Size(97, 21);
+            this.block4.Size = new System.Drawing.Size(332, 21);
             this.block4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block4.TabIndex = 5;
             this.block4.TabStop = false;
@@ -222,7 +220,7 @@
             this.block3.Image = ((System.Drawing.Image)(resources.GetObject("block3.Image")));
             this.block3.Location = new System.Drawing.Point(838, 314);
             this.block3.Name = "block3";
-            this.block3.Size = new System.Drawing.Size(100, 25);
+            this.block3.Size = new System.Drawing.Size(238, 25);
             this.block3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block3.TabIndex = 4;
             this.block3.TabStop = false;
@@ -235,7 +233,7 @@
             this.block2.Image = ((System.Drawing.Image)(resources.GetObject("block2.Image")));
             this.block2.Location = new System.Drawing.Point(238, 414);
             this.block2.Name = "block2";
-            this.block2.Size = new System.Drawing.Size(125, 23);
+            this.block2.Size = new System.Drawing.Size(358, 23);
             this.block2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block2.TabIndex = 3;
             this.block2.TabStop = false;
@@ -248,7 +246,7 @@
             this.block1.Image = ((System.Drawing.Image)(resources.GetObject("block1.Image")));
             this.block1.Location = new System.Drawing.Point(688, 514);
             this.block1.Name = "block1";
-            this.block1.Size = new System.Drawing.Size(183, 26);
+            this.block1.Size = new System.Drawing.Size(326, 26);
             this.block1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.block1.TabIndex = 2;
             this.block1.TabStop = false;
@@ -272,10 +270,10 @@
             this.enmy2.BackColor = System.Drawing.Color.Transparent;
             this.enmy2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.enmy2.Image = ((System.Drawing.Image)(resources.GetObject("enmy2.Image")));
-            this.enmy2.Location = new System.Drawing.Point(490, 546);
+            this.enmy2.Location = new System.Drawing.Point(506, 565);
             this.enmy2.Name = "enmy2";
-            this.enmy2.Size = new System.Drawing.Size(81, 79);
-            this.enmy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.enmy2.Size = new System.Drawing.Size(65, 60);
+            this.enmy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enmy2.TabIndex = 0;
             this.enmy2.TabStop = false;
             // 
@@ -295,7 +293,6 @@
             this.screen.BackColor = System.Drawing.Color.Transparent;
             this.screen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.screen.Controls.Add(this.enmy1);
-            this.screen.Controls.Add(this.enmy6);
             this.screen.Controls.Add(this.enmy5);
             this.screen.Controls.Add(this.enmy4);
             this.screen.Controls.Add(this.enmy3);
@@ -321,37 +318,18 @@
             this.screen.Size = new System.Drawing.Size(1184, 851);
             this.screen.TabIndex = 28;
             // 
-            // timer1
+            // enmy1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
-            // enmy3
-            // 
-            this.enmy3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.enmy3.BackColor = System.Drawing.Color.Transparent;
-            this.enmy3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.enmy3.Image = ((System.Drawing.Image)(resources.GetObject("enmy3.Image")));
-            this.enmy3.Location = new System.Drawing.Point(741, 414);
-            this.enmy3.Name = "enmy3";
-            this.enmy3.Size = new System.Drawing.Size(81, 79);
-            this.enmy3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.enmy3.TabIndex = 21;
-            this.enmy3.TabStop = false;
-            // 
-            // enmy4
-            // 
-            this.enmy4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.enmy4.BackColor = System.Drawing.Color.Transparent;
-            this.enmy4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.enmy4.Image = ((System.Drawing.Image)(resources.GetObject("enmy4.Image")));
-            this.enmy4.Location = new System.Drawing.Point(282, 314);
-            this.enmy4.Name = "enmy4";
-            this.enmy4.Size = new System.Drawing.Size(81, 79);
-            this.enmy4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.enmy4.TabIndex = 22;
-            this.enmy4.TabStop = false;
+            this.enmy1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enmy1.BackColor = System.Drawing.Color.Transparent;
+            this.enmy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enmy1.Image = ((System.Drawing.Image)(resources.GetObject("enmy1.Image")));
+            this.enmy1.Location = new System.Drawing.Point(638, 642);
+            this.enmy1.Name = "enmy1";
+            this.enmy1.Size = new System.Drawing.Size(64, 58);
+            this.enmy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enmy1.TabIndex = 25;
+            this.enmy1.TabStop = false;
             // 
             // enmy5
             // 
@@ -359,38 +337,44 @@
             this.enmy5.BackColor = System.Drawing.Color.Transparent;
             this.enmy5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.enmy5.Image = ((System.Drawing.Image)(resources.GetObject("enmy5.Image")));
-            this.enmy5.Location = new System.Drawing.Point(827, 229);
+            this.enmy5.Location = new System.Drawing.Point(863, 257);
             this.enmy5.Name = "enmy5";
-            this.enmy5.Size = new System.Drawing.Size(81, 79);
-            this.enmy5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.enmy5.Size = new System.Drawing.Size(45, 51);
+            this.enmy5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enmy5.TabIndex = 23;
             this.enmy5.TabStop = false;
             // 
-            // enmy6
+            // enmy4
             // 
-            this.enmy6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.enmy6.BackColor = System.Drawing.Color.Transparent;
-            this.enmy6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.enmy6.Image = ((System.Drawing.Image)(resources.GetObject("enmy6.Image")));
-            this.enmy6.Location = new System.Drawing.Point(604, 129);
-            this.enmy6.Name = "enmy6";
-            this.enmy6.Size = new System.Drawing.Size(81, 79);
-            this.enmy6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.enmy6.TabIndex = 24;
-            this.enmy6.TabStop = false;
+            this.enmy4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enmy4.BackColor = System.Drawing.Color.Transparent;
+            this.enmy4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enmy4.Image = ((System.Drawing.Image)(resources.GetObject("enmy4.Image")));
+            this.enmy4.Location = new System.Drawing.Point(307, 337);
+            this.enmy4.Name = "enmy4";
+            this.enmy4.Size = new System.Drawing.Size(56, 56);
+            this.enmy4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enmy4.TabIndex = 22;
+            this.enmy4.TabStop = false;
             // 
-            // enmy1
+            // enmy3
             // 
-            this.enmy1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.enmy1.BackColor = System.Drawing.Color.Transparent;
-            this.enmy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.enmy1.Image = ((System.Drawing.Image)(resources.GetObject("enmy1.Image")));
-            this.enmy1.Location = new System.Drawing.Point(621, 621);
-            this.enmy1.Name = "enmy1";
-            this.enmy1.Size = new System.Drawing.Size(81, 79);
-            this.enmy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.enmy1.TabIndex = 25;
-            this.enmy1.TabStop = false;
+            this.enmy3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.enmy3.BackColor = System.Drawing.Color.Transparent;
+            this.enmy3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.enmy3.Image = ((System.Drawing.Image)(resources.GetObject("enmy3.Image")));
+            this.enmy3.Location = new System.Drawing.Point(770, 442);
+            this.enmy3.Name = "enmy3";
+            this.enmy3.Size = new System.Drawing.Size(52, 51);
+            this.enmy3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enmy3.TabIndex = 21;
+            this.enmy3.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // Lvl12
             // 
@@ -420,11 +404,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.GameOver)).EndInit();
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.enmy3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enmy4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enmy5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enmy6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enmy1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enmy3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,7 +434,6 @@
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox enmy1;
-        private System.Windows.Forms.PictureBox enmy6;
         private System.Windows.Forms.PictureBox enmy5;
         private System.Windows.Forms.PictureBox enmy4;
         private System.Windows.Forms.PictureBox enmy3;

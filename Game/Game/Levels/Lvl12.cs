@@ -474,25 +474,56 @@ namespace Game.Levels
                 }
             }
 
-            //bad_guy movement and wall collision
-            if (enmy2.Right > block0.Right)
+            //enmy1 movement and wall collision
+            if (enmy1.Right > block0.Right)
             {
-                enmy2.Left = block0.Right - enmy2.Width;
-                check_guy1 = false;
-                enmy2.Image = Image.FromFile("bigbadleft.gif");
+                enmy1.Left = block0.Right - enmy1.Width;
+                check_enemy1 = false;
+                enmy1.Image = Image.FromFile("manLeft.gif");
             }
-            if (enmy2.Left < block0.Left)
+            if (enmy1.Left < block0.Left)
             {
-                enmy2.Left = block0.Left;
-                check_guy1 = true;
-                enmy2.Image = Image.FromFile("bigbadright.gif");
+                enmy1.Left = block0.Left;
+                check_enemy1 = true;
+                enmy1.Image = Image.FromFile("manRight.gif");
             }
 
-            if (check_guy1 == true) { enmy2.Left += 4; }
+            if (check_enemy1 == true) { enmy1.Left += 4; }
+
+            else { enmy1.Left -= 4; }
+
+            //collision with enmy1 (game over)
+            if (player.Right > enmy1.Left && player.Left < enmy1.Right - player.Width && player.Bottom < enmy1.Bottom && player.Bottom > enmy1.Top)
+            {
+                isCatched = true;
+            }
+
+            if (player.Left < enmy1.Right && player.Right > enmy1.Left + player.Width && player.Bottom < enmy1.Bottom && player.Bottom > enmy1.Top)
+            {
+
+                isCatched = true;
+            }
+
+
+            //enmy2 movement and wall collision
+            if (enmy2.Right > block2.Right)
+            {
+                enmy2.Left = block2.Right - enmy2.Width;
+                check_enemy2 = false;
+                enmy2.Image = Image.FromFile("womenLeft.gif");
+            }
+            if (enmy2.Left < block2.Left)
+            {
+                enmy2.Left = block2.Left;
+                check_enemy2 = true;
+                enmy2.Image = Image.FromFile("womenRight.gif");
+            }
+
+            if (check_enemy2 == true) { enmy2.Left += 4; }
 
             else { enmy2.Left -= 4; }
 
-            //collision with bad_guy (game over)
+            //collision with enmy2 (game over)
             if (player.Right > enmy2.Left && player.Left < enmy2.Right - player.Width && player.Bottom < enmy2.Bottom && player.Bottom > enmy2.Top)
             {
                 isCatched = true;
@@ -503,6 +534,99 @@ namespace Game.Levels
 
                 isCatched = true;
             }
+
+            //enmy3 movement and wall collision
+            if (enmy3.Right > block3.Right)
+            {
+                enmy3.Left = block3.Right - enmy3.Width;
+                check_enemy3 = false;
+                enmy3.Image = Image.FromFile("womenLeft.gif");
+            }
+            if (enmy3.Left < block3.Left)
+            {
+                enmy3.Left = block3.Left;
+                check_enemy3 = true;
+                enmy3.Image = Image.FromFile("womenRight.gif");
+            }
+
+            if (check_enemy3 == true) { enmy3.Left += 4; }
+
+            else { enmy3.Left -= 4; }
+
+            //collision with enmy3 (game over)
+            if (player.Right > enmy3.Left && player.Left < enmy3.Right - player.Width && player.Bottom < enmy3.Bottom && player.Bottom > enmy3.Top)
+            {
+                isCatched = true;
+            }
+
+            if (player.Left < enmy3.Right && player.Right > enmy3.Left + player.Width && player.Bottom < enmy3.Bottom && player.Bottom > enmy3.Top)
+            {
+
+                isCatched = true;
+            }
+
+
+
+            //enmy4 movement and wall collision
+            if (enmy4.Right > block4.Right)
+            {
+                enmy4.Left = block4.Right - enmy4.Width;
+                check_enemy4 = false;
+                enmy4.Image = Image.FromFile("manLeft.gif");
+            }
+            if (enmy4.Left < block4.Left)
+            {
+                enmy4.Left = block4.Left;
+                check_enemy4 = true;
+                enmy4.Image = Image.FromFile("manRight.gif");
+            }
+
+            if (check_enemy4 == false) { enmy4.Left += 4; }
+
+            else { enmy4.Left -= 4; }
+
+            //collision with enmy4 (game over)
+            if (player.Right > enmy4.Left && player.Left < enmy4.Right - player.Width && player.Bottom < enmy4.Bottom && player.Bottom > enmy4.Top)
+            {
+                isCatched = true;
+            }
+
+            if (player.Left < enmy4.Right && player.Right > enmy4.Left + player.Width && player.Bottom < enmy4.Bottom && player.Bottom > enmy4.Top)
+            {
+
+                isCatched = true;
+            }
+
+            //enmy5 movement and wall collision
+            if (enmy5.Right > block5.Right)
+            {
+                enmy5.Left = block5.Right - enmy5.Width;
+                check_enemy5 = false;
+                enmy5.Image = Image.FromFile("manLeft.gif");
+            }
+            if (enmy5.Left < block5.Left)
+            {
+                enmy5.Left = block5.Left;
+                check_enemy5 = true;
+                enmy5.Image = Image.FromFile("manRight.gif");
+            }
+
+            if (check_enemy5 == false) { enmy5.Left += 4; }
+
+            else { enmy5.Left -= 4; }
+
+            //collision with enmy4 (game over)
+            if (player.Right > enmy5.Left && player.Left < enmy5.Right - player.Width && player.Bottom < enmy5.Bottom && player.Bottom > enmy5.Top)
+            {
+                isCatched = true;
+            }
+
+            if (player.Left < enmy5.Right && player.Right > enmy5.Left + player.Width && player.Bottom < enmy5.Bottom && player.Bottom > enmy5.Top)
+            {
+
+                isCatched = true;
+            }
+
 
             //collision with star (win)
             if (player.Right > Star.Left && player.Left < Star.Right - player.Width && player.Bottom < Star.Bottom && player.Bottom > Star.Top)
