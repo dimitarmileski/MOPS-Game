@@ -333,6 +333,7 @@ private void initPositions()
 Пример за движење на еден блок.
 
 
+
 ```csharp
 
             if (block1.Right > screen.Right)
@@ -364,5 +365,70 @@ private void initPositions()
                     player.Left -= (2 + platformSpeed1);
                 }
             }
+
+```
+
+### Интеракција со тастатура
+
+Имплементирани се двата методи KeyDown() и КеyUp() на секоја Level форма. Овие два методи добро работат, но се појавува проблем со стрелките на тастатурата, кои може да не работат. Постојат неколку начини ова да се реши, но според препораката на Microsoft треба да се имплементира методот PreviewKeyDownEvent. 
+
+[Control.PreviewKeyDown Event](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.control.previewkeydown?redirectedfrom=MSDN&view=netframework-4.8)
+
+
+```csharp
+
+private void Lvl1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Right) { right = true; }
+
+            if (e.KeyCode == Keys.Left) { left = true; }
+
+            if (e.KeyCode == Keys.Escape) {
+                this.Close();
+                th = new Thread(openNewWinForm);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+
+            if (jump != true)
+            {
+                if (e.KeyCode == Keys.Space)
+                {
+                    jump = true;
+                    Force = G;
+                }
+            }
+
+            if (e.KeyCode == Keys.Enter) {
+                this.Close();
+                th = new Thread(restartForm);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+        }
+
+
+        private void Lvl1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Right) { right = false; glitch = false; }
+
+            if (e.KeyCode == Keys.Left) { left = false; glitch = false; }
+
+            if (e.KeyCode == Keys.Space) { glitch = false; }
+        }
+
+
+        private void Lvl1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Down:
+                case Keys.Left:
+                case Keys.Right:
+                case Keys.Up:
+                    e.IsInputKey = true;
+                    break;
+            }
+        }
 
 ```
