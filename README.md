@@ -72,7 +72,7 @@
         }
 ```
 
-Прикажување на формите на цел екран
+### Прикажување на формите на цел екран
 
  ```csharp
 
@@ -84,7 +84,7 @@
 
 #### Levels Form
 
-Прикажување на шемата на нивоа
+### Прикажување на шемата на нивоа
 
 ```csharp
  //Levels Picture Box
@@ -146,7 +146,7 @@ Double buffering
 
 #### Options Form
 
-Вклучување и исклучување на музиката.
+### Вклучување и исклучување на музиката.
 OptionsForm.cs
 
 ```csharp
@@ -207,7 +207,7 @@ System.Media.SoundPlayer backgroundSound = new System.Media.SoundPlayer();
 
 ```
 
-Победа 
+### Победа 
 
 ```csharp
 
@@ -226,7 +226,7 @@ backgroundSound.Play();
 
 При победа се запира позадинската музика, се пушта позадинската музика. По 900 милисекунди повторно се пушта позадинската музика.
 
-Пораз
+### Пораз
 
 ```csharp
 
@@ -238,3 +238,131 @@ if (isCatched == true) //game over (when in contact with badGuy
             }
 ```
 
+Позиционирање на случајни позиции на блоковите, противници, играч
+
+```csharp
+
+private void initPositions()
+        {
+            Star.Location = new Point(this.Width-(this.Width/6), 5);
+
+            Random rnd = new Random();
+
+            block0.Location = new Point(rnd.Next(100, this.Width - 100), 420);
+            bad_guy.Location = new Point(block0.Location.X /2, block0.Location.Y - bad_guy.Height);
+
+            block1.Location = new Point(rnd.Next(100, this.Width - 100), 320);
+            block2.Location = new Point(rnd.Next(100, this.Width - 100), 220);
+            block3.Location = new Point(rnd.Next(100, this.Width - 100), 120);
+            block4.Location = new Point(rnd.Next(100, this.Width - 100), 20);
+            block5.Location = new Point(rnd.Next(100, this.Width - 100), 520);
+            block6.Location = new Point(rnd.Next(100, this.Width - 100), 620);
+            block7.Location = new Point(rnd.Next(100, this.Width - 100), 720);
+
+            player.Location = new Point(rnd.Next(100, this.Width - 100), this.Height - player.Height);
+        }
+
+ ```
+
+### Анимација на играчот во зависност од состојбата
+
+```csharp
+
+  if (left == false && right == false && jump == false) { player.Image = Image.FromFile("dogstanding.gif"); } //standing 
+            if (left == true && jump == true) { player.Image = Image.FromFile("dogleftjump.gif"); } //jumping to the left side
+            if (right == true && jump == true) { player.Image = Image.FromFile("dogrightjump.gif"); } //jumping to the right side
+            if (left == true && jump == false && glitch == false) { player.Image = Image.FromFile("dogwalkingleft.gif"); glitch = true; } //moving to the left side
+            if (right == true && jump == false && glitch == false) { player.Image = Image.FromFile("dogwalkingright.gif"); glitch = true; } //moving to the right side
+            if (left == false && right == false && jump == true) { player.Image = Image.FromFile("dogjump.gif"); } //jumping on one place
+
+```
+
+### Движење на играчот
+
+Движењето се имплементира со помош на Left, Right, Top property на player кое е PictureBox. Left, Right, Top се растојанија од горниот, левиот и деснот раб на прозорецот со горниот, левиот и десниот раб на player соодветно.
+
+```csharp
+
+   if (right == true) //player moving right
+            {
+                player.Left += 6;
+            }
+
+            if (left == true) //player moving left
+            {
+                player.Left -= 6;
+            }
+
+            if (jump == true) //falling (if player jumped)
+            {
+                player.Top -= Force;
+                Force -= 1;
+            }
+
+            if (player.Top + player.Height >= screen.Height)
+            {
+                player.Top = screen.Height - player.Height; // does not fall tru bottom!
+                jump = false;
+            }
+
+            else
+            {
+                player.Top += 5; // just falling/gravity
+            }
+
+            // player side (window) collision
+            if (player.Right > screen.Right) //right wall
+            {
+                player.Left = screen.Width - player.Width;
+                right = false;
+            }
+
+            if (player.Left < screen.Left) //left wall
+            {
+                player.Left = screen.Left;
+                left = false;
+            }
+            //
+
+```
+
+### Движење на блоковите 
+
+Постојат два типови на блокови, кои што се разликуваат според според правецот во кои инициално се движат, како и брзината на движење.
+
+Пример за движење на еден блок.
+
+
+```csharp
+
+            if (block1.Right > screen.Right)
+            {
+                block1.Left = screen.Width - block1.Width;
+                check1 = false;
+            }
+
+            if (block1.Left < screen.Left)
+            {
+                block1.Left = screen.Left;
+                check1 = true;
+            }
+
+            if (check1 == true)
+            {
+                block1.Left += (2 + platformSpeed1);
+                if (player.Bottom == block1.Top)
+                {
+                    player.Left += (2 + platformSpeed1);
+                }
+            }
+
+            else
+            {
+                block1.Left -= (2 + platformSpeed1);
+                if (player.Bottom == block1.Top)
+                {
+                    player.Left -= (2 + platformSpeed1);
+                }
+            }
+
+```
