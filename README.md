@@ -44,11 +44,6 @@
 #### Menu Form
 Секоја ставка во менито се отвара во нова форма, како нишка а старата форма се затвора.
 
-#### Levels Form
-#### Options Form
-#### About Form
-#### Level Form
-
 
  ```csharp
     private Thread th;
@@ -75,5 +70,65 @@
             }
 
         }
+```
 
-    ```
+Прикажување на формите на цел екран
+
+ ```csharp
+
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+     
+```
+
+#### Levels Form
+
+Прикажување на шемата на нивоа
+
+```csharp
+ //Levels Picture Box
+        private List<PictureBox> levelsBoxes;
+
+//...
+
+ private void LevelsForm_Load(object sender, EventArgs e)
+        {
+
+//...
+
+lvlPnl.Size = new Size(this.Width, this.Height / 2);
+            lvlPnl.Location = new Point(0, this.Height / 2 - (lvlPnl.Height / 2));
+
+            for (int i = 0; i < levelsBoxes.Count(); i++)
+            {
+                levelsBoxes[i].Size = new Size(this.Width / 15, this.Height);
+            }
+
+
+            for (int i = 0; i < levelsBoxes.Count(); i++)
+            {
+                Label label = new Label();
+
+                label.Text = "Level " + (i + 1);
+
+                label.Location = new Point(levelsBoxes[i].Location.X, levelsBoxes[i].Location.Y + levelsBoxes[i].Height / 3);
+                label.BringToFront();
+                label.Size = new Size(levelsBoxes[i].Width, 80);
+                label.BackColor = Color.DarkGray;
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.Font = new Font("Consolas", 10, FontStyle.Bold);
+                label.ForeColor = Color.White;
+                this.Controls.Add(label);
+            }
+
+//...
+}
+
+
+```
+
+#### Options Form
+#### About Form
+#### Level Form
+
