@@ -220,91 +220,106 @@ namespace Game
         private void picBoxLvl1_Click(object sender, EventArgs e)
         {
             levelSelected = "1";
+           
             openLevelForm();
         }
 
         private void picBoxLvl2_Click(object sender, EventArgs e)
         {
             levelSelected = "2";
-            openLevelForm();
+            if (LevelsState.levelPassed[0])
+                openLevelForm();
         }
 
         private void picBoxLvl3_Click(object sender, EventArgs e)
         {
             levelSelected = "3";
-            openLevelForm();
+            if (LevelsState.levelPassed[1])
+                openLevelForm();
         }
 
         private void picBoxLvl4_Click(object sender, EventArgs e)
         {
             levelSelected = "4";
-            openLevelForm();
+            if (LevelsState.levelPassed[2])
+                openLevelForm();
         }
 
         private void picBoxLvl5_Click(object sender, EventArgs e)
         {
             levelSelected = "5";
-            openLevelForm();
+            if (LevelsState.levelPassed[3])
+                openLevelForm();
         }
 
         private void picBoxLvl6_Click(object sender, EventArgs e)
         {
             levelSelected = "6";
-            openLevelForm();
+            if (LevelsState.levelPassed[4])
+                openLevelForm();
         }
 
         private void picBoxLvl7_Click(object sender, EventArgs e)
         {
             levelSelected = "7";
-            openLevelForm();
+            if (LevelsState.levelPassed[5])
+                openLevelForm();
         }
 
         private void picBoxLvl8_Click(object sender, EventArgs e)
         {
             levelSelected = "8";
-            openLevelForm();
+            if (LevelsState.levelPassed[6])
+                openLevelForm();
         }
 
         private void picBoxLvl9_Click(object sender, EventArgs e)
         {
             levelSelected = "9";
-            openLevelForm();
+            if (LevelsState.levelPassed[7])
+                openLevelForm();
         }
 
         private void picBoxLvl10_Click(object sender, EventArgs e)
         {
             levelSelected = "10";
-            openLevelForm();
+            if (LevelsState.levelPassed[8])
+                openLevelForm();
         }
 
         private void picBoxLvl11_Click(object sender, EventArgs e)
         {
             levelSelected = "11";
-            openLevelForm();
+            if (LevelsState.levelPassed[9])
+                openLevelForm();
         }
 
         private void picBoxLvl12_Click(object sender, EventArgs e)
         {
             levelSelected = "12";
-            openLevelForm();
+            if (LevelsState.levelPassed[10])
+                openLevelForm();
         }
 
         private void picBoxLvl13_Click(object sender, EventArgs e)
         {
             levelSelected = "13";
-            openLevelForm();
+            if (LevelsState.levelPassed[11])
+                openLevelForm();
         }
 
         private void picBoxLvl14_Click(object sender, EventArgs e)
         {
             levelSelected = "14";
-            openLevelForm();
+            if (LevelsState.levelPassed[12])
+                openLevelForm();
         }
 
         private void picBoxLvl15_Click(object sender, EventArgs e)
         {
             levelSelected = "15";
-            openLevelForm();
+            if (LevelsState.levelPassed[13])
+                openLevelForm();
         }
 
 
@@ -402,6 +417,8 @@ namespace Game
             FileName = null;
             saveFile();
         }
+
+       
     }
 }
 
